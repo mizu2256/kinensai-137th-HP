@@ -1,0 +1,57 @@
+/* ファイル全体改変禁止 */
+/* 環境変数 */
+:root {
+  /* 文字の大きさ・文章 */
+  --SbFont: 16px;
+  --MbFont: 19px;
+  --LbFont: 22px;
+
+  /* 文字の大きさ・タイトル */
+  --XStFont: 24px;
+  --StFont: 30px;
+  --MtFont: 36px;
+  --LtFont: 42px;
+  --XLtFont: 48px;
+}
+
+
+footer {
+  min-height: 315px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-con {
+  padding: 20px;
+}
+
+.site-map h2 {
+  margin-bottom: 16px;
+  font-size: var(--LtFont);
+}
+
+.site-map ul li a {
+  display: block;
+  color: black;
+  padding-bottom: 16px;
+  font-size: var(--MbFont);
+}
+
+.follow-us h2 {
+  font-size: var(--LtFont);
+}
+
+.sns {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.sns a i {
+  font-size: 64px;
+  color: black;
+}

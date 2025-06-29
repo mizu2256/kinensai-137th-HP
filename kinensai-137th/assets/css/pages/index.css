@@ -1,0 +1,35 @@
+/* フォントのインポート */
+
+
+
+/* 環境変数 */
+:root {
+  /* 文字の大きさ・文章 */
+  --SbFont: 16px;
+  --MbFont: 19px;
+  --LbFont: 22px;
+
+  /* 文字の大きさ・タイトル */
+  --XStFont: 24px;
+  --StFont: 30px;
+  --MtFont: 36px;
+  --LtFont: 42px;
+  --XLtFont: 48px;
+}
+
+
+#logo {
+  min-height: 115px;
+}
+
+.schedule-con {
+  display: block;
+  width: 50%;
+}
+
+.day-con {
+  display: flex;
+  justify-content: left;
+  gap: 50px;
+  margin: 5px auto;
+}

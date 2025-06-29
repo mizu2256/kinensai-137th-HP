@@ -1,0 +1,22 @@
+/* 全体設定・ファイル全体改変禁止 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.2);
+}

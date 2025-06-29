@@ -1,0 +1,58 @@
+/* フォントのインポート */
+
+/* 環境変数 */
+:root {
+  /* 文字の大きさ・文章 */
+  --SbFont: 16px;
+  --MbFont: 19px;
+  --LbFont: 22px;
+
+  /* 文字の大きさ・タイトル */
+  --XStFont: 24px;
+  --StFont: 30px;
+  --MtFont: 36px;
+  --LtFont: 42px;
+  --XLtFont: 48px;
+}
+
+.schedule-con {
+  display: block;
+  width: 50%;
+}
+
+.day-con {
+  display: flex;
+  justify-content: left;
+  gap: 50px;
+  margin: 5px auto;
+}
+
+.title-con {
+  height: 100%;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.title h1 {
+  font-size: 80px;
+}
+
+#title-schedule {
+  display: flex;
+  height: 748px;
+  background-image: url("pictures/HP.png");
+  background-size: cover;
+}
+
+.schedule {
+  position: absolute;
+  top: 70%;
+  right: 0px;
+  transform: translate(-125%,-50%);
+}
