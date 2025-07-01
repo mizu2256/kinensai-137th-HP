@@ -15,6 +15,10 @@
   --MtFont: 36px;
   --LtFont: 42px;
   --XLtFont: 48px;
+
+  /* 色の指定 */
+  --ColorI: rgb(240,240,240);
+  --ColorII: rgb(36,36,188);
 }
 
 
