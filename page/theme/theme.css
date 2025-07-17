@@ -14,3 +14,33 @@
 }
 
 /* ここから編集 */
+.spacer {
+  display: block;
+  height: 26px;
+}
+
+
+#theme {
+  min-height: 615px;
+}
+
+.theme-con {
+  max-width: 1215px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.theme-info h1 {
+  font-size: var(--MtFont);
+}
+
+.theme-info h2 {
+  font-size: var(--XStFont);
+  padding: 40px 0;
+}
+
+.theme-info p {
+  font-size: var(--SbFont);
+  line-height: 160%;
+}
