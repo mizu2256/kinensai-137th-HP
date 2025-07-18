@@ -15,8 +15,19 @@
 
 /* ここから編集 */
 h2 {
-  font-size: var(--LbFont)
+  font-size: var(--MtFont);
+  text-align: center;
 }
-h3{
-  font-size:var(--LbFont);
+
+h3 {
+  font-size: var(--StFont);
+  text-align: center;
+}
+
+.dl-link {
+  text-align: center;
+}
+
+.dl-link a {
+  font-size: var(--LbFont);
 }
