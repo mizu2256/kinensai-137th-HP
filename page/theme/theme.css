@@ -33,6 +33,7 @@
 
 .theme-info h1 {
   font-size: var(--MtFont);
+  position: relative;
 }
 
 .theme-info h2 {

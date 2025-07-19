@@ -5,6 +5,25 @@
   box-sizing: border-box;
 }
 
+/* 環境変数・改変禁止 */
+:root {
+  /* 文字の大きさ・文章 */
+  --SbFont: 16px;
+  --MbFont: 19px;
+  --LbFont: 22px;
+
+  /* 文字の大きさ・タイトル */
+  --XStFont: 24px;
+  --StFont: 30px;
+  --MtFont: 36px;
+  --LtFont: 42px;
+  --XLtFont: 48px;
+
+  /* 色の指定 */
+  --colorI: rgb(240,240,240);
+  --colorII: rgb(36,36,188);
+}
+
 a,
 li {
   text-decoration: none;
@@ -15,4 +34,14 @@ li {
   width: 100%;
   max-width: 1350px;
   margin: 0 auto;
+}
+
+.inv {
+  opacity: 0.1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 216px;
+  color: var(--colorII);
 }

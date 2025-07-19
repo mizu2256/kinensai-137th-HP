@@ -12,6 +12,10 @@
   --MtFont: 36px;
   --LtFont: 42px;
   --XLtFont: 48px;
+
+  /* 色の指定 */
+  --colorI: rgb(240,240,240);
+  --colorII: rgb(36,36,188);
 }
 
 
@@ -65,5 +69,5 @@ header {
 }
 
 .nav-con .nav-links ul li a:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--colorII);
 }
