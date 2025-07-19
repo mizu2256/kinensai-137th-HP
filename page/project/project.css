@@ -18,6 +18,10 @@
 }
 
 /* ここから編集 */
+.spacer {
+  display: block;
+  height: 26px;
+}
 
 #top {
   min-height: 100px;
@@ -33,7 +37,7 @@
 
 .project-con {
   display: flex;
-  margin: 0 5%;
+  margin: 25px 5%;
 }
 
 .info h2 {
@@ -44,6 +48,24 @@
 .info p {
   margin: 0 10px;
   font-size: var(--mbFont);
+}
+
+.add {
+  cursor: pointer;
+}
+
+.add p {
+  margin: 10px 10px;
+  font-size: var(--sbFont);
+  color: var(--colorII);
+}
+
+.kodo-more p {
+  font-size: var(--sbFont);
+}
+
+.hide {
+  display: none;
 }
 
 #class-project,
