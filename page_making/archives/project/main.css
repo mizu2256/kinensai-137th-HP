@@ -1,3 +1,10 @@
+/* 全体設定・ファイル全体改変禁止 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* 環境変数・改変禁止 */
 :root {
   /* 文字の大きさ・文章 */
@@ -17,35 +24,24 @@
   --colorII: rgb(36,36,188);
 }
 
-/* ここから編集 */
-.spacer {
-  display: block;
-  height: 26px;
+a,
+li {
+  text-decoration: none;
+  list-style: none;
 }
 
-
-#theme {
-  min-height: 615px;
-}
-
-.theme-con {
-  max-width: 1215px;
-  width: 70%;
+.wrapper {
+  width: 100%;
+  max-width: 1350px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.theme-info h1 {
-  font-size: var(--mtFont);
-  position: relative;
-}
-
-.theme-info h2 {
-  font-size: var(--stFont);
-  padding: 40px 0;
-}
-
-.theme-info p {
-  font-size: var(--mbFont);
-  line-height: 160%;
+.inv {
+  opacity: 0.1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 216px;
+  color: var(--colorII);
 }
