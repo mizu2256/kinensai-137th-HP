@@ -54,10 +54,20 @@
   cursor: pointer;
 }
 
-.add p {
-  margin: 10px 10px;
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle p,
+.toggle i {
+  margin: 10px 5px;
   font-size: var(--sbFont);
   color: var(--colorII);
+}
+
+.toggle i {
+  padding: auto;
 }
 
 .kodo-more p {
@@ -75,8 +85,15 @@
   min-height: 150px;
 }
 
-.picture figure img {
-  margin: 10px;
+.picture {
   width: 480px;
   height: 270px;
+  margin: 0 auto;
+}
+
+.item figure img {
+  margin-top: 10px;
+  width: 480px !important;
+  height: 270px;
+  object-fit: contain;
 }

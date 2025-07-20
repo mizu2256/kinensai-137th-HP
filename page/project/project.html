@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="project.css">
 
     <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 </head>
 
 <body>
@@ -93,18 +101,53 @@
                         <h2>講堂企画</h2>
                         <p>記念祭において講堂で開催される音楽祭やゲーム大会などの企画の総称である。東海中高最大の会場で盛り上がれ！</p>
                         <div class="add">
-                            <p id="open-kodo" class="toggle open-kodo">↓ もっと見る</p>
-                            <p id="close-kodo" class="toggle close-kodo hide">↑ 閉じる</p>
+                            <div id="open-kodo" class="toggle open-kodo">
+                                <i class="fa-solid fa-angle-down"></i>
+                                <p>もっと見る</p>
+                            </div>
+                            <div id="close-kodo" class="toggle close-kodo hide">
+                                <i class="fa-solid fa-angle-up"></i>
+                                <p>閉じる</p>
+                            </div>
                         </div>
                         <div class="kodo-more hide">
-                            <p>講堂企画とはその名前の通り東海中高の「講堂」で開催される企画です。県の重要文化財にも指定され、校内で最も多くの方が入場可能なこの講堂で音楽祭やゲーム大会など様々なパフォーマンスがとり行われます。なお講堂内は冷房完備なため暑さ残るこの季節でも快適に楽しむことができます。<span class="spacer"></span>「音楽祭」とはその名の通り、土曜日に開催される記念祭最大の音楽企画です。本校の軽音楽同好会を中心に多くの個性豊かな有志のバンドや生徒によってJーPOP、ジャズから生徒自身が作曲したオリジナル曲まで、多種多様な音楽が披露されます。出演者は事前オーディションによって選ばれていてそれぞれが自身の全力を解放します。<span class="spacer"></span>「海神」とは第134回記念祭から毎年日曜日の午後に開催されている東海高校１、2年によるゲーム大会です。初代海神から毎年変わらず開催されているスマッシュブラザーズSPは今年もそのまま継続し、昨年度採用されたマリオカート8DXをスプラトゥーン3へと変更。事前オーディションによって選ばれた出演者によって大迫力の戦いが繰り広げられます。実行委員から選出された実況、解説が出場者のプレイを彩り、記念祭を最後の最後まで盛り上げます。<span class="spacer"></span>また、日曜日の午前には主に本校オーケストラ部、吹奏楽部、ジャグリング部によるクラブ融資企画なども開催されます。<span class="spacer"></span>当日は音楽祭、海神、クラブ有志企画による生徒たちはもちろん、実行委員も講堂を快適なものにするためサポートし、企画をライトや音響などで全力で盛り上げて最高のひとときを提供します。ぜひ足を運んでみてください！</p>
+                            <p>講堂企画とはその名前の通り東海中高の「講堂」で開催される企画です。県の重要文化財にも指定され、校内で最も多くの方が入場可能なこの講堂で音楽祭やゲーム大会など様々なパフォーマンスがとり行われます。なお講堂内は冷房完備なため暑さ残るこの季節でも快適に楽しむことができます。<span
+                                    class="spacer"></span>「音楽祭」とはその名の通り、土曜日に開催される記念祭最大の音楽企画です。本校の軽音楽同好会を中心に多くの個性豊かな有志のバンドや生徒によってJーPOP、ジャズから生徒自身が作曲したオリジナル曲まで、多種多様な音楽が披露されます。出演者は事前オーディションによって選ばれていてそれぞれが自身の全力を解放します。<span
+                                    class="spacer"></span>「海神」とは第134回記念祭から毎年日曜日の午後に開催されている東海高校1、2年によるゲーム大会です。初代海神から毎年変わらず開催されているスマッシュブラザーズSPは今年もそのまま継続し、昨年度採用されたマリオカート8DXをスプラトゥーン3へと変更。事前オーディションによって選ばれた出演者によって大迫力の戦いが繰り広げられます。実行委員から選出された実況、解説が出場者のプレイを彩り、記念祭を最後の最後まで盛り上げます。<span
+                                    class="spacer"></span>また、日曜日の午前には主に本校オーケストラ部、吹奏楽部、ジャグリング部によるクラブ融資企画なども開催されます。<span
+                                    class="spacer"></span>当日は音楽祭、海神、クラブ有志企画による生徒たちはもちろん、実行委員も講堂を快適なものにするためサポートし、企画をライトや音響などで全力で盛り上げて最高のひとときを提供します。ぜひ足を運んでみてください！
+                            </p>
                         </div>
                     </div>
 
                     <div class="kodo-picture picture">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <figure>
+                                    <img src="pictures/logo.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,7 +173,27 @@
         </section>
     </main>
     <!-- ここまで編集 -->
+    <!-- これ以降はJSリンク・定義 -->
     <script src="project.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            center: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            mouseDrag: false,
+            touchDrag: false,
+        })
+        html
+    </script>
 </body>
 
 </html>
