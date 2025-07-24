@@ -1,25 +1,4 @@
 /* ファイル全体改変禁止 */
-/* 環境変数 */
-:root {
-  /* 文字の大きさ・文章 */
-  --sbFont: 16px;
-  --mbFont: 19px;
-  --lbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --xstFont: 24px;
-  --stFont: 30px;
-  --mtFont: 36px;
-  --ltFont: 42px;
-  --xltFont: 48px;
-
-  /* 色の指定 */
-  --colorI: rgb(240,240,240);
-  --colorII: rgb(36,36,188);
-}
-
-
-
 /* ヘッダーの設定 */
 header {
   display: flex;

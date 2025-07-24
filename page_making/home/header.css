@@ -20,8 +20,8 @@ header {
 }
 
 .header-con .main-logo a img {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 39px;
   padding-top: 3px;
 }
 
@@ -44,5 +44,5 @@ header {
 }
 
 .nav-con .nav-links ul li a:hover {
-  border-bottom: 2px solid var(--colorII);
+  border-bottom: 2px solid black;
 }

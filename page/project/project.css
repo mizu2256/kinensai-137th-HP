@@ -1,22 +1,3 @@
-/* 環境変数・改変禁止 */
-:root {
-  /* 文字の大きさ・文章 */
-  --sbFont: 16px;
-  --mbFont: 19px;
-  --lbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --xstFont: 24px;
-  --stFont: 30px;
-  --mtFont: 36px;
-  --ltFont: 42px;
-  --xltFont: 48px;
-
-  /* 色の指定 */
-  --colorI: rgb(240, 240, 240);
-  --colorII: rgb(36, 36, 188);
-}
-
 /* ここから編集 */
 .spacer {
   display: block;
@@ -57,6 +38,7 @@
 .toggle {
   display: flex;
   align-items: center;
+  transition: opacity 0.3s ease;
 }
 
 .toggle p,
@@ -70,12 +52,39 @@
   padding: auto;
 }
 
+.kodo-more {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.kodo-more.show-animation {
+  max-height: 800px;
+  opacity: 1;
+}
+
 .kodo-more p {
   font-size: var(--sbFont);
 }
 
-.hide {
-  display: none;
+.hide-animation {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle.hide {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.toggle:not(.hide) {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #class-project,

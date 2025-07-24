@@ -1,18 +1,3 @@
-/* 環境変数・改変禁止 */
-:root {
-  /* 文字の大きさ・文章 */
-  --SbFont: 16px;
-  --MbFont: 19px;
-  --LbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --XStFont: 24px;
-  --StFont: 30px;
-  --MtFont: 36px;
-  --LtFont: 42px;
-  --XLtFont: 48px;
-}
-
 /* ここから編集 */
 #info {
   margin: 10px 0;
@@ -24,7 +9,7 @@
 
 .info-con h1 {
   margin: 20px;
-  font-size: var(--LtFont);
+  font-size: var(--ltFont);
 }
 
 #updates {
@@ -39,7 +24,7 @@
 .updates-info h2,
 .qa-info h2 {
   margin-bottom: 20px;
-  font-size: var(--MtFont);
+  font-size: var(--mtFont);
 }
 
 .qa-box {
@@ -53,7 +38,7 @@
 .qa-title {
   border-bottom: solid 1px rgb(245, 247, 250);
   margin-bottom: 24px;
-  font-size: var(--XStFont);
+  font-size: var(--xstFont);
 }
 
 .qa-title h3 {
@@ -62,9 +47,9 @@
 }
 
 .qa-answer {
-  font-size: var(--MbFont);
+  font-size: var(--mbFont);
 }
 
 .qa-answer .answer-large {
-  font-size: var(--XStFont);
+  font-size: var(--xstFont);
 }

@@ -1,10 +1,5 @@
 /* 全体設定・ファイル全体改変禁止 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* 環境変数・改変禁止 */
 /* 環境変数 */
 :root {
   /* 文字の大きさ・文章 */
@@ -24,11 +19,18 @@
   --colorII: rgb(36,36,188);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 a,
 li {
   text-decoration: none;
   list-style: none;
 }
+
 
 .wrapper {
   width: 100%;

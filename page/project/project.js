@@ -1,15 +1,34 @@
-const box1 = document.querySelector(".kodo-more")
-const box2 = document.querySelector(".open-kodo")
-const box3 = document.querySelector(".close-kodo")
+let checkkodo = 0;
 
-document.getElementById("open-kodo").addEventListener("click", function(){
-  box1.classList.remove("hide")
-  box2.classList.add("hide")
-  box3.classList.remove("hide")
-})
+const kodoMore = document.querySelector(".kodo-more");
+const openKodo = document.querySelector(".open-kodo");
+const closeKodo = document.querySelector(".close-kodo");
 
-document.getElementById("close-kodo").addEventListener("click", function() {
-  box1.classList.add("hide")
-  box2.classList.remove("hide")
-  box3.classList.add("hide")
-})
+openKodo.addEventListener("click", function () {
+  if (checkkodo == 0) {
+    kodoMore.classList.remove("hide-animation");
+    setTimeout(() => {
+      kodoMore.classList.add("show-animation");
+    }, 10);
+    openKodo.classList.add("hide");
+    closeKodo.classList.remove("hide");
+    setTimeout(() => {
+      checkkodo = 1;
+    }, 600);
+  }
+});
+
+closeKodo.addEventListener("click", function () {
+  if (checkkodo == 1) {
+    kodoMore.classList.remove("show-animation");
+    kodoMore.addEventListener("transitionend", function handler() {
+      kodoMore.classList.add("hide-animation");
+      kodoMore.removeEventListener("transitionend", handler);
+    });
+    openKodo.classList.remove("hide");
+    closeKodo.classList.add("hide");
+    setTimeout(() => {
+      checkkodo = 0;
+    }, 600);
+  }
+});
