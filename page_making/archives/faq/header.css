@@ -1,4 +1,21 @@
 /* ファイル全体改変禁止 */
+/* 環境変数 */
+:root {
+  /* 文字の大きさ・文章 */
+  --SbFont: 16px;
+  --MbFont: 19px;
+  --LbFont: 22px;
+
+  /* 文字の大きさ・タイトル */
+  --XStFont: 24px;
+  --StFont: 30px;
+  --MtFont: 36px;
+  --LtFont: 42px;
+  --XLtFont: 48px;
+}
+
+
+
 /* ヘッダーの設定 */
 header {
   display: flex;
@@ -26,7 +43,7 @@ header {
 }
 
 .header-con .main-logo a h1 {
-  font-size: var(--mtFont);
+  font-size: var(--MtFont);
   color: black;
 }  
 
