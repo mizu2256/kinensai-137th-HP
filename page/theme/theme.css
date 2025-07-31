@@ -2,32 +2,85 @@
 /* ここから編集 */
 .spacer {
   display: block;
-  height: 26px;
+  height: 180px;
 }
-
 
 #theme {
   min-height: 615px;
+  padding-top: 72px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .theme-con {
+  position: relative;
   max-width: 1215px;
   width: 70%;
   margin: 0 auto;
   text-align: center;
 }
 
+/* theme bg */
+.theme-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  filter: brightness(1.5);
+}
+
+.bg-image1 {
+  background-image: url(pictures/theme-bg-1.png);
+}
+
+.bg-image2 {
+  background-image: url(pictures/theme-bg-2.png);
+}
+
+.bg-image3 {
+  background-image: url(pictures/theme-bg-3.png);
+}
+
+.bg-image.active {
+  opacity: 1;
+}
+
+/* theme info */
+.theme-info {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
 .theme-info h1 {
-  font-size: var(--mtFont);
+  font-size: var(--ltFont);
   position: relative;
 }
 
 .theme-info h2 {
-  font-size: var(--stFont);
+  font-size: var(--mtFont);
   padding: 40px 0;
+  margin-bottom: 200px;
 }
 
 .theme-info p {
-  font-size: var(--mbFont);
+  font-size: var(--xstFont);
   line-height: 160%;
+  margin-bottom: 200px;
 }
