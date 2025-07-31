@@ -1,23 +1,12 @@
 /* ファイル全体改変禁止 */
-/* 環境変数 */
-:root {
-  /* 文字の大きさ・文章 */
-  --SbFont: 16px;
-  --MbFont: 19px;
-  --LbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --XStFont: 24px;
-  --StFont: 30px;
-  --MtFont: 36px;
-  --LtFont: 42px;
-  --XLtFont: 48px;
+/* フッターの設定 */
+footer {
+  border-top: 2px solid var(--colorII);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-footer {
-  min-height: 315px;
-  background-color: rgba(0, 0, 0, 0.2);
+.footer-con {
+  padding: 8px 0 10px;
 }
 
 .footer-info {
@@ -25,33 +14,27 @@ footer {
   justify-content: space-between;
 }
 
-.footer-con {
-  padding: 20px;
+.tokai-info {
+  margin: auto 0;
 }
 
-.site-map h2 {
-  margin-bottom: 16px;
-  font-size: var(--LtFont);
+.trip-to-tokai {
+  margin: auto 0;
 }
 
-.site-map ul li a {
-  display: block;
-  color: black;
-  padding-bottom: 16px;
-  font-size: var(--MbFont);
-}
-
-.follow-us h2 {
-  font-size: var(--LtFont);
+.trip-to-tokai p {
+  opacity: 0.6;
+  font-size: var(--stFont);
+  color: var(--colorII);
 }
 
 .sns {
+  text-align: center;
   display: flex;
-  justify-content: space-between;
-  padding: 5px;
+  gap: 20px;
 }
 
 .sns a i {
-  font-size: 64px;
+  font-size: var(--xltFont);
   color: black;
 }

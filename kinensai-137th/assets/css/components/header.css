@@ -1,31 +1,6 @@
 /* ファイル全体改変禁止 */
-/* 環境変数 */
-:root {
-  /* 文字の大きさ・文章 */
-  --SbFont: 16px;
-  --MbFont: 19px;
-  --LbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --XStFont: 24px;
-  --StFont: 30px;
-  --MtFont: 36px;
-  --LtFont: 42px;
-  --XLtFont: 48px;
-
-  /* 色の指定 */
-  --colorI: rgb(240,240,240);
-  --colorII: rgb(36,36,188);
-}
-
-
-
 /* ヘッダーの設定 */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -51,7 +26,7 @@ header {
 }
 
 .header-con .main-logo a h1 {
-  font-size: var(--MtFont);
+  font-size: var(--mtFont);
   color: black;
 }  
 
