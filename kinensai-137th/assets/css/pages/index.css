@@ -18,7 +18,7 @@ main {
 #title-schedule {
   display: flex;
   height: 900px;
-  background-image: url("../../pictures/pages/home/HP.png");
+  background-image: url("../../pictures/pages/home/HP.webp");
   background-size: cover;
   background-position: left;
 }

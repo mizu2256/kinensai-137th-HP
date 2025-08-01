@@ -47,15 +47,15 @@ main {
 }
 
 .bg-image1 {
-  background-image: url(../../pictures/pages/theme/theme-bg-1.png);
+  background-image: url(../../pictures/pages/theme/theme-bg-1.webp);
 }
 
 .bg-image2 {
-  background-image: url(../../pictures/pages/theme/theme-bg-2.png);
+  background-image: url(../../pictures/pages/theme/theme-bg-2.webp);
 }
 
 .bg-image3 {
-  background-image: url(../../pictures/pages/theme/theme-bg-3.png);
+  background-image: url(../../pictures/pages/theme/theme-bg-3.webp);
 }
 
 .bg-image.active {
