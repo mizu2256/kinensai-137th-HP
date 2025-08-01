@@ -1,5 +1,9 @@
 /* 環境変数・改変禁止 */
 /* ここから編集 */
+main {
+  padding: 72px 0 0;
+}
+
 .spacer {
   display: block;
   height: 180px;
@@ -7,7 +11,6 @@
 
 #theme {
   min-height: 615px;
-  padding-top: 72px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -76,7 +79,7 @@
 .theme-info h2 {
   font-size: var(--mtFont);
   padding: 40px 0;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .theme-info p {

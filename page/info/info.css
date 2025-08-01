@@ -1,4 +1,8 @@
 /* ここから編集 */
+main {
+  padding: 72px 0 36px;
+  flex-grow: 1;
+}
 
 #info {
   margin: 10px 0;

@@ -1,6 +1,7 @@
 /* ここから編集 */
 main {
-  padding-top: 72px;
+  padding: 72px 0 36px;
+  flex-grow: 1;
 }
 
 textarea,
@@ -29,6 +30,7 @@ input {
 }
 
 .form {
+  margin: 8px;
   width: 90vw;
   border: 1px solid gray;
 }

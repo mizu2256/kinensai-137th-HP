@@ -1,7 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const backgroundImages = document.querySelectorAll('.bg-image');
-    const content = document.querySelector('.theme-info');
-    const PageHeight = document.documentElement.scrollHeight / 3;
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+
+    const headerHeight = header ? header.offsetHeight : 0;
+    const footerHeight = footer ? footer.offsetHeight : 0;
+    
+    const fullPageHeight = document.documentElement.scrollHeight;
+    
+    const scrollableHeight = fullPageHeight - headerHeight - footerHeight;
+
+    const PageHeight = scrollableHeight / 3;
 
     let currentIndex = 0;
 
@@ -10,7 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
         
-        let newIndex = Math.floor(scrollY / PageHeight);
+        const adjustedScrollY = scrollY - headerHeight;
+
+        let newIndex = 0;
+        if (adjustedScrollY > 0) {
+             newIndex = Math.floor(adjustedScrollY / PageHeight);
+        }
 
         if (newIndex >= backgroundImages.length) {
             newIndex = backgroundImages.length - 1;

@@ -1,4 +1,9 @@
 /* ここから編集 */
+main {
+  padding: 72px 0 36px;
+  flex-grow: 1;
+}
+
 .spacer {
   display: block;
   height: 26px;
