@@ -27,6 +27,11 @@ footer {
   font-size: var(--mbFont);
 }
 
+.tokai-info a {
+  font-size: var(--sbFont);
+  color: var(--colorII);
+}
+
 .trip-to-tokai {
   margin: auto 0;
   position: absolute;

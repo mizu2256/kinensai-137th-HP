@@ -41,6 +41,63 @@ main {
   font-size: var(--mbFont);
 }
 
+
+.add {
+  cursor: pointer;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.toggle p,
+.toggle i {
+  margin: 10px 5px;
+  font-size: var(--sbFont);
+  color: var(--colorII);
+}
+
+.toggle i {
+  padding: auto;
+}
+
+.kodo-more {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.kodo-more.show-animation {
+  max-height: 800px;
+  opacity: 1;
+}
+
+.kodo-more p {
+  font-size: var(--sbFont);
+}
+
+.hide-animation {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle.hide {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.toggle:not(.hide) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 #class-project,
 #stage-project,
 #kodo-project,

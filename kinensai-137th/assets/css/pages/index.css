@@ -20,7 +20,7 @@ main {
   height: 900px;
   background-image: url("../../pictures/pages/home/HP.png");
   background-size: cover;
-  background-position: right;
+  background-position: left;
 }
 
 .title-con {
@@ -38,7 +38,6 @@ main {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   padding: 30px;
-
 }
 
 .title a {
@@ -55,7 +54,6 @@ main {
 
 .title a:hover {
   background-position: right center;
-
 }
 
 .title h2 {
@@ -70,7 +68,6 @@ main {
   text-align: left;
   /* transform: translateX(150px); */
   margin-left: 40px;
-
 }
 
 .saturday {
@@ -86,7 +83,6 @@ main {
 
 .time {
   font-size: var(--mtFont);
-
 }
 
 /* 注意事項 */
@@ -117,20 +113,26 @@ main {
 
 .attention-center {
   text-align: left;
-  animation: fadeInUp 2s ease-out forwards;
-  animation-delay: 2s;
-  text-decoration: none;
-  view-timeline-name: --box;
+  /* animation: fadeInUp 2s ease-out 2s forwards; */
+  /* text-decoration: none; */
+  /* view-timeline-name: --box;
   view-timeline-axis: block;
   animation-timeline: --box;
-  animation-range: entry 30% cover 50%;
+  animation-range: entry 30% cover 50%; */
+}
+
+.attention-center h2,
+.attention-center h3 {
+  animation: fadeInUp 2s ease-out 2s forwards;
+  border-bottom: 4px solid #b3000000;
 }
 
 @keyframes fadeInUp {
   to {
-    text-decoration: underline;
+    border-bottom: 4px solid #b30000ff;
+    /* text-decoration: underline;
     text-decoration-color: #b30000;
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 4px; */
   }
 }
 
@@ -180,7 +182,6 @@ main {
   width: 100%;
   border: 0;
   max-width: 500px;
-
 }
 
 .access-detail h2 {
@@ -194,7 +195,6 @@ main {
   /* 横方向の中央揃え */
   justify-content: center;
   /* 縦方向の中央揃え（子が複数なら効果あり） */
-
 }
 
 .station-name span {
@@ -222,7 +222,6 @@ main {
   border-left: 2px solid rgb(35, 0, 160);
   margin-left: 20px;
   padding-left: 20px;
-
 }
 
 /* 記念祭とは */
@@ -242,7 +241,6 @@ main {
   padding: 20px;
   background-color: rgb(227, 244, 247);
   border-radius: 20px;
-
 }
 
 .wh-kinen-box p {
@@ -337,7 +335,6 @@ main {
   text-decoration: none;
   color: var(--colorII);
   transition: all 0.5s;
-
 }
 
 .wh-kinen-box a:hover {
@@ -359,5 +356,4 @@ main {
   color: var(--colorII);
   font-size: var(--sbFont);
   transition: all 0.5s;
-
 }
