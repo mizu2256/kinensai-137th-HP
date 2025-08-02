@@ -18,6 +18,12 @@ h3 {
   text-align: center;
 }
 
-.dl-link a {
+.dl-link p {
   font-size: var(--lbFont);
+  cursor: not-allowed;
+  color: black;
+}
+
+.dl-link a {
+  display: none;
 }
