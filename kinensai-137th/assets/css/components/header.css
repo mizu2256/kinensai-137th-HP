@@ -31,6 +31,8 @@ header {
 
 .header-con .main-logo a h1 {
   font-size: var(--mtFont);
+  font-family: var(--fontI);
+  font-weight: 500;
   color: black;
 }
 

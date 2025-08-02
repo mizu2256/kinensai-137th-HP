@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 /* 全体設定・ファイル全体改変禁止 */
 * {
   margin: 0;
@@ -22,6 +25,10 @@
   /* 色の指定 */
   --colorI: rgb(240,240,240);
   --colorII: rgb(36,36,188);
+
+  /* フォント */
+  --fontI: "Zen Antique Soft",serif;
+  --fontII: "Cookie",serif;
 }
 
 body {
