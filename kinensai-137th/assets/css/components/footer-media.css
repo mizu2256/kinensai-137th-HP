@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .footer-info {
     display: block;
     text-align: center;
@@ -16,7 +16,7 @@
   }
 }
 
-@media (max-width: 564px) {
+@media (max-width: 640px) {
   .footer-media {
     display: block;
   }
