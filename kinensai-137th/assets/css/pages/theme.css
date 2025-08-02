@@ -85,5 +85,5 @@ main {
 .theme-info p {
   font-size: var(--xstFont);
   line-height: 160%;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }

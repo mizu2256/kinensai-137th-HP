@@ -1,0 +1,20 @@
+@media (max-width: 960px) {
+  .theme-info p {
+    font-size: var(--mbFont);
+  }
+}
+
+@media (max-width: 640px) {
+  .theme-con {
+    max-width: 394px;
+    width: 85%;
+  }
+
+  .theme-info h1 {
+    font-size: var(--mtFont);
+  }
+
+  .theme-info h2 {
+    font-size: var(--stFont);
+  }
+}
