@@ -4,10 +4,10 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .theme-con {
-    max-width: 394px;
-    width: 85%;
+    max-width: 484px;
+    width: 90%;
   }
 
   .theme-info h1 {
@@ -15,6 +15,26 @@
   }
 
   .theme-info h2 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 512px) {
+  .theme-info {
+    padding: 30px;
+  }
+
+  .theme-info h1 {
     font-size: var(--stFont);
   }
+
+  .theme-info h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 360px) {
+  .theme-info h2 {
+    font-size: var(--xltFont);
+  }  
 }
