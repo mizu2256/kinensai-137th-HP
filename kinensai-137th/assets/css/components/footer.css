@@ -56,6 +56,8 @@ footer {
   justify-content: space-between;
   gap: 20px;
   padding: 0 10px;
+  margin: 0 auto;
+  max-width: 144px;
 }
 
 .sns a i {

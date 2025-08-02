@@ -1,0 +1,27 @@
+@media (max-width: 900px) {
+  .footer-info {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .trip-to-tokai {
+    position: static;
+    transform: translate(0%,0%);
+  }
+}
+
+@media (max-width: 564px) {
+  .footer-media {
+    display: block;
+  }
+
+  .trip-to-tokai {
+    padding: 20px 0;
+  }
+}
