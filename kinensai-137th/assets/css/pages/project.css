@@ -24,7 +24,26 @@ main {
 
 .project-con {
   display: flex;
-  margin: 25px 5%;
+  margin: 0 5%;
+  padding: 25px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.class-con {
+  background-color: rgba(188, 36, 36, 0.2);
+}
+
+.stage-con {
+  background-color: rgba(36, 188, 36, 0.2);
+}
+
+.kodo-con {
+  background-color: rgba(36, 36, 188, 0.2);
+}
+
+.store-con {
+  background-color: rgba(188, 188, 36, 0.2);
 }
 
 .info {
@@ -111,11 +130,11 @@ main {
 }
 
 .item figure img {
-  margin: 10px auto 0;
+  margin: 0 auto;
   padding: 0 1px;
   width: 480px !important;
   height: 320px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 20px;
   overflow: hidden;
 }
