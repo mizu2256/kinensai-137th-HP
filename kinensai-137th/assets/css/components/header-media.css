@@ -6,6 +6,14 @@
 
 @media (max-width: 900px) {
   .burger-menu {
+    display: flex;
+  }
+
+  .burger-menu .toggle-burger {
+    display: none;
+  }
+
+  .burger-menu .toggle-burger.active {
     display: block;
   }
 
