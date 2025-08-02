@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>137周年記念祭 - ご案内</title>
+    <title>137周年記念祭 - お問い合わせフォーム</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components/header.css">
     <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/header-media.css">
     <link rel="stylesheet" href="assets/css/pages/faq.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -81,7 +82,11 @@
                     </a>
                 </div>
 
-                <div class="nav-con">
+                <div id="burger-menu" class="burger-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="nav-con hide">
                     <nav class="nav-links">
                         <ul>
                             <li><a href="index.html">HOME</a></li>
@@ -156,6 +161,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/components/header.js"></script>
 </body>
 
 </html>

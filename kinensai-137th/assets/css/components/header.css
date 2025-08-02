@@ -32,21 +32,37 @@ header {
 .header-con .main-logo a h1 {
   font-size: var(--mtFont);
   color: black;
-}  
+}
 
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
 
-.nav-con .nav-links ul {
+.burger-menu i {
+  font-size: var(--stFont);
+}
+
+.nav-con {
+  display: none;
+}
+
+.nav-links {
+  position: relative;
+}
+
+.nav-links ul {
   display: flex;
   gap: 60px;
 }
 
-.nav-con .nav-links ul li a {
+.nav-links ul li a {
   color: black;
   padding: 2px;
   transition: border-bottom 0.4s ease;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
-.nav-con .nav-links ul li a:hover {
+.nav-links ul li a:hover {
   border-bottom: 2px solid var(--colorII);
 }
