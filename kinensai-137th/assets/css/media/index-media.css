@@ -1,0 +1,125 @@
+@media (max-width: 1240px) {
+  .map {
+    width: 45%;
+  }
+
+  .required-minutes {
+    padding: 10px 0;
+  }
+
+  .required-minutes span {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .required-minutes {
+    display: block;
+  }
+}
+
+@media (max-width: 960px) {
+  .background-text {
+    font-size: 90px;
+  }
+
+  .access-title {
+    justify-content: center;
+  }
+
+  .access-con {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .required-minutes {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  #title-schedule {
+    height: 680px;
+  }
+
+  .title {
+    left: 0;
+    right: 0;
+    top: 50%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media (max-width: 640px) {
+  .background-text {
+    font-size: 75px;
+  }
+
+  #title-schedule {
+    height: 520px;
+  }
+
+  .align-left {
+    text-align: center;
+    margin: 0;
+  }
+
+  .align-left h2 {
+    font-size: var(--mtFont);
+  }
+
+  .title a {
+    font-size: 120px;
+  }
+
+  .title h3 {
+    font-size: var(--xltFont);
+  }
+
+  .saturday,
+  .sunday {
+    font-size: var(--mtFont);
+  }
+
+  .time {
+    font-size: var(--stFont);
+  }
+
+  .access-detail {
+    flex-direction: column;
+  }
+
+  .higashiyama {
+    border-left: 0;
+    border-top: 2px solid rgb(35, 0, 160);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 512px) {
+  .background-text {
+    opacity: 0;
+  }
+
+  #title-schedule {
+    height: 600px;
+  }
+
+  .align-left h2 {
+    font-size: var(--stFont);
+  }
+
+  .title a {
+    font-size: 100px;
+  }
+
+  .title h3 span.time {
+    display: block;
+  }
+}
