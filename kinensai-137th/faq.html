@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/components/header-media.css">
     <link rel="stylesheet" href="assets/css/components/footer-media.css">
     <link rel="stylesheet" href="assets/css/pages/faq.css">
+    <link rel="stylesheet" href="assets/css/media/faq-media.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -61,8 +62,10 @@
                 var spl = val.split('\n');
                 var n = spl.length;
                 var u = n;
-                for (let i = 0; i < n; i++)
-                    u += Math.floor(spl[i].split('').length * 16 / cwidth);
+                for (let i = 0; i < n; i++){
+                    console.log(spl[i].split('').length);
+                    u += Math.ceil(spl[i].split('').length * 16 / cwidth);
+                }
                 if (u >= 3)
                     $('.content').attr('rows', u);
                 else
@@ -104,13 +107,21 @@
     </header>
     <!-- ここから編集 -->
     <main>
+        <section id="top">
+            <div class="wrapper">
+                <div class="top-con">
+                    <div class="top-info">
+                        <h1>お問い合わせ</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="main">
             <div class="form">
-                <div class="midashi">お問い合わせフォーム</div>
                 <div class="box">
                     <div class="explanation">
                         <div>メールアドレス</div>
-                        <div>例: example@tokai-jh.ed.jp</div>
+                        <div><div>例: </div><div>example@tokai-jh.ed.jp</div></div>
                     </div>
                     <div class="answer">
                         <div class="question" id="q1">メールアドレス</div>
@@ -119,15 +130,15 @@
                 </div>
                 <div class="box">
                     <div class="explanation">
-                        <div>ご質問内容</div>
-                        <div>例: 学校の敷地内に入るために予約は必要ですか？</div>
+                        <div>お問い合わせ内容</div>
+                        <div><div>例: </div><div>学校の敷地内に入るために予約は必要ですか？</div></div>
                         <div>質問は複数あっても構いません。</div>
                     </div>
                     <div class="answer">
                         <textarea class="content" id="content" rows="3" placeholder="✎"></textarea>
                     </div>
                 </div>
-                <div class="subsubmit"><button id="submit">送信</button></div>
+                <div class="subsubmit"><button id="submit"><div>　</div><div>送信</div><div>➡</div></button></div>
             </div>
             <div class="submitting">送信中...</div>
             <div class="thanks">

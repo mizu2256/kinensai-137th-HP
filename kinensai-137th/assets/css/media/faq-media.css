@@ -1,0 +1,23 @@
+@media (max-width: 512px) {
+    :root {
+        --y: 7px;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .box > div {
+        width: 100%;
+    }
+
+    .box > .explanation {
+        margin-bottom: 8px;
+    }
+}
+
+@media (min-width: 512px) {
+    .box > .explanation {
+        width: 50%;
+    }
+}

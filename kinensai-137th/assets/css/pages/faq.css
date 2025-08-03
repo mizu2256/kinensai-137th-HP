@@ -1,4 +1,8 @@
 /* ここから編集 */
+:root {
+ --y: 12px;
+}
+
 main {
   padding: 72px 0 36px;
   flex-grow: 1;
@@ -29,10 +33,21 @@ input {
   justify-content: center;
 }
 
+#top {
+  min-height: 50px;
+}
+
+.top-con {
+  text-align: center;
+}
+
+.top-info h1 {
+  font-size: var(--ltFont);
+}
+
 .form {
   margin: 8px;
   width: 90vw;
-  border: 1px solid gray;
 }
 
 .box {
@@ -43,22 +58,25 @@ input {
 
 .box>.explanation {
   color: gray;
-  width: 50%;
 }
 
 .explanation>div:first-child {
-  font-size: var(--SbFont);
+  font-size: var(--mbFont);
   color: black;
+}
+
+.explanation>div:nth-child(2) {
+  display: flex;
 }
 
 .answer {
   width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .address {
-  font-size: var(--SbFont);
+  font-size: var(--sbFont);
   padding: 10px;
   width: 100%;
   border: 1px solid gray;
@@ -70,17 +88,19 @@ input {
 }
 
 .question {
+  color: gray;
   pointer-events: none;
   translate: 0;
   position: absolute;
-  transform: translate(0px, 10px);
+  transform: translateY(var(--y));
+  margin-left: 6px;
   padding: 0 4px;
   background-color: white;
 }
 
 .question.shuunou {
   font-size: 13px;
-  transform: translate(-80px, -9px);
+  transform: translateY(-9px);
   color: green;
 }
 
@@ -89,51 +109,58 @@ input {
 }
 
 .content {
-  font-size: var(--SbFont);
+  font-size: var(--sbFont);
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid gray;
+  overflow: hidden;
 }
 
-.form>div:first-child {
-  font-size: var(--LbFont);
-  background-color: lightgray;
-  padding: 5px;
-  border-bottom: 1px solid gray;
+.content:focus {
+  border-bottom: 1px solid green;
 }
 
-.form>div:not(:first-child) {
+.form>div {
   margin: 10px;
 }
 
 .form>div:nth-child(2) {
   padding-bottom: 10px;
-  border-bottom: 1.5px dashed gray;
+}
+
+.subsubmit {
+  display: flex;
+  justify-content: center;
 }
 
 button#submit {
-  font-size: var(--SbFont);
-  padding: 3px 15px;
-  border-radius: 15px;
-  background: linear-gradient(154deg, blue, #0000ffad);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: var(--mbFont);
+  padding: 7px 15px;
+  border-radius: 3px;
   border: none;
+  background-color: blue;
   color: white;
-  transition: linear 0.1s box-shadow;
+  transition: linear 0.1s background-color;
   cursor: pointer;
+  width: 200px;
 }
 
 button#submit:hover {
-  box-shadow: 0px 0px 8px 0px #0000ff99;
+  background-color: rgb(64, 64, 255);
 }
 
 @keyframes shuunou {
   0% {
-    transform: translate(0, 10px);
-    font-size: var(--SbFont);
+    transform: translateY(var(--y));
+    font-size: var(--sbFont);
     color: black;
   }
 
   100% {
-    transform: translate(-80px, -9px);
+    transform: translateY(-9px);
     font-size: 13px;
     color: green;
   }
@@ -141,14 +168,14 @@ button#submit:hover {
 
 @keyframes kakudai {
   0% {
-    transform: translate(-80px, -9px);
+    transform: translateY(-9px);
     font-size: 13px;
     color: green;
   }
 
   100% {
-    transform: translate(0, 10px);
-    font-size: var(--SbFont);
+    transform: translateY(var(--y));
+    font-size: var(--sbFont);
     color: black;
   }
 }
