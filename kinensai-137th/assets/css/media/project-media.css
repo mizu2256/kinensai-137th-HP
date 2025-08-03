@@ -1,0 +1,32 @@
+@media (max-width: 960px) {
+  .top-con {
+    margin: 15px 0 0;
+  }
+
+  .project-con {
+    flex-direction: column;
+    margin: 10px auto 30px;
+    text-align: center;
+  }
+
+  .toggle p,
+  .toggle i {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .picture {
+    max-width: 480px;
+    width: 100%;
+    max-height: 320px;
+    height: 100%;
+  }
+
+  .item figure img {
+    max-width: 480px;
+    width: 100% !important;
+    max-height: 320px;
+    height: 100%;
+  }
+}
