@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+  main h2 {
+    font-size: var(--xstFont);
+  }
+
+  main h3 {
+    font-size: var(--mbFont);
+  }
+
+  .dl-link p {
+    font-size: var(--mbFont);
+  }
+}
+
+@media (max-width: 450px) {
+  .media-spacer {
+    display: block;
+  }
+}
