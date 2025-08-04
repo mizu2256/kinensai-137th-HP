@@ -13,6 +13,29 @@
 }
 
 @media (max-width: 1150px) {
+  .attention-title img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .attention-title h1 {
+    font-size: var(--ltFont);
+    margin-right: 40px;
+  }
+
+  .one-attention img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .attention-detail h2 {
+    font-size: var(--stFont);
+  }
+
+  .attention-detail h3 {
+    font-size: var(--mbFont);
+  }
+
   .required-minutes {
     display: block;
   }
@@ -21,6 +44,15 @@
 @media (max-width: 960px) {
   .background-text {
     font-size: 90px;
+  }
+
+  .attention-con {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .attention-title h1 {
+    margin: 0 15px;
   }
 
   .access-title {
@@ -38,6 +70,19 @@
 
   .required-minutes {
     display: flex;
+  }
+
+  .wh-kinen-box {
+    text-align: center;
+  }
+
+  .wh-kinen-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .align-right {
+    text-align: center;
   }
 }
 
@@ -90,6 +135,38 @@
     font-size: var(--stFont);
   }
 
+  .one-attention img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .attention-center h2,
+  .attention-center h3 {
+    border-bottom: 3px solid #b3000000;
+    animation: fadeInUp2 2s ease-out 2s forwards;
+  }
+
+  @keyframes fadeInUp2 {
+    to {
+      border-bottom: 3px solid #b30000ff;
+    }
+  }
+
+  .one-attention {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  .attention-detail h2 {
+    font-size: var(--xstFont);
+  }
+
+  .attention-detail h3 {
+    font-size: var(--sbFont);
+  }
+
   .access-detail {
     flex-direction: column;
   }
@@ -105,10 +182,11 @@
 @media (max-width: 512px) {
   .background-text {
     opacity: 0;
+    display: none;
   }
 
   #title-schedule {
-    height: 600px;
+    height: 540px;
   }
 
   .align-left h2 {
@@ -121,5 +199,47 @@
 
   .title h3 span.time {
     display: block;
+  }
+
+  .wh-kinen-box {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  #title-schedule {
+    height: 490px;
+  }
+
+  .title h2 {
+    font-size: var(--xstFont);
+  }
+
+  .title a {
+    font-size: 80px;
+  }
+
+  .wh-kinen-box a {
+    font-size: var(--mbFont);
+  }
+}
+
+@media (max-width: 350px) {
+  .title h2 {
+    font-size: var(--lbFont);
+  }
+
+  .title a {
+    font-size: 70px;
+  }
+
+  .slider,
+  .slider figure img {
+    height: 160px;
+    width: 240px;
+  }
+
+  .wh-kinen-box a {
+    font-size: var(--sbFont);
   }
 }

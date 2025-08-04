@@ -155,7 +155,7 @@ main {
 .attention-detail {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 /* アクセス */
@@ -257,6 +257,7 @@ main {
 .wh-kinen-group {
   display: flex;
 }
+
 .slider figure img {
   height: 200px;
   width: 300px;
