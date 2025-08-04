@@ -78,12 +78,14 @@ main {
 
 .theme-info h2 {
   color: black;
+  position: relative;
   font-weight: 900;
   text-shadow: black 2px 5px 5px;
   font-size: 100px;
   font-family: var(--fontII);
   padding: 40px 0;
   margin-bottom: 100px;
+  z-index: 1;
 }
 
 .theme-info h2::before {
@@ -91,7 +93,12 @@ main {
   color: white;
   position: absolute;
   font-weight: 100;
+  width: 100%;
   pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .theme-info p {
