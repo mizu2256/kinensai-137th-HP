@@ -29,6 +29,7 @@
   /* フォント */
   --fontI: "Zen Antique Soft",serif;
   --fontII: "Alex Brush",serif;
+  --fontIII: sans-serif;
 }
 
 body {
