@@ -25,3 +25,13 @@
     padding: 20px 0;
   }
 }
+
+@media (max-width: 350px) {
+  .tokai-info h2 {
+    font-size: var(--xstFont);
+  }
+
+  .tokai-info p {
+    font-size: var(--sbFont);
+  }
+}
