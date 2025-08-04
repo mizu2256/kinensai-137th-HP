@@ -31,8 +31,9 @@
             $(document).on('click', '#submit', function () {
                 var address = $('#address').val();
                 var content = $('#content').val();
+                address = removespace(address);
                 if (!address || !content) { alert("アドレスか質問内容に文字列が入力されていません"); return; } else
-                    if (!confirm(`入力内容に間違いはありませんか？\n メールアドレス: ${address}`)) return;
+                    if (!checkaddress(address)) return; else if (!confirm(`入力内容に間違いはありませんか？\n メールアドレス: ${address}`)) return;
                 console.log("clicked");
                 $(".form").css('display', 'none');
                 $(".submitting").css('display', 'block');
@@ -43,6 +44,8 @@
                 }).then((val) => {
                     $(".submitting").css('display', 'none');
                     $(".thanks").css('display', 'block');
+                    $(".return").css('display', 'block');
+                    $(".main").css('flex-direction','column');
                     console.log(content);
                 });
             });
@@ -71,6 +74,22 @@
                 else
                     $('.content').attr('rows', 3);
             });
+
+            function removespace(address) {
+                var str = address.split(" ").join("");
+                var str2 = str.split("　").join("");
+                return str2;
+            }
+
+            function checkaddress(address) {
+                var b = true;
+                var string = [];
+                if (!address.split("").includes("@")) {string.push("メールアドレスに@が含まれていません。");b = false;}
+                else if (!address.split("@")[1].includes(".")) {string.push("@の後には～.comや～.jpなどが入ります。");b=false;}
+                if (address.split("@")[0] == "") {string.push("@の前に何も書かれていません。");b=false;}
+                if (!b) alert(string.join("\n"));
+                return b;
+            }
         });
     </script>
 </head>
@@ -140,9 +159,12 @@
                 </div>
                 <div class="subsubmit"><button id="submit"><div>　</div><div>送信</div><div>➡</div></button></div>
             </div>
-            <div class="submitting">送信中...</div>
+            <div class="submitting">送信中です。<br>しばらくお待ちください。</div>
             <div class="thanks">
-                お問い合わせありがとうございました。お問い合わせ内容への回答は数日以内にメールをお送りいたします。
+                ありがとうございました。<br>お問い合わせ内容への回答は数日以内にメールをお送りいたします。
+            </div>
+            <div class="return">
+                <a href="index.html"><div>⬅</div><div>ホームに戻る</div></a>
             </div>
         </div>
     </main>
