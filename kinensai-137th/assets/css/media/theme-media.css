@@ -1,7 +1,4 @@
 @media (max-width: 960px) {
-  .theme-info h2 {
-    font-size: 90px;
-  }
   .theme-info p {
     font-size: var(--mbFont);
   }
@@ -16,10 +13,6 @@
   .theme-info h1 {
     font-size: var(--mtFont);
   }
-
-  .theme-info h2 {
-    font-size: 76px;
-  }
 }
 
 @media (max-width: 512px) {
@@ -30,14 +23,22 @@
   .theme-info h1 {
     font-size: var(--stFont);
   }
+}
 
-  .theme-info h2 {
-    font-size: 56px;
+@media (max-width: 868px) {
+  .bon_voyage {
+    background-size: 360px;
   }
 }
 
-@media (max-width: 360px) {
-  .theme-info h2 {
-    font-size: var(--xltFont);
-  }  
+@media (max-width: 565px) {
+  .bon_voyage {
+    background-size: 270px;
+  }
+}
+
+@media (max-width: 405px) {
+  .bon_voyage {
+    background-size: 200px;
+  }
 }
