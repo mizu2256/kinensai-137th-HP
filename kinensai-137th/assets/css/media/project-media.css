@@ -17,16 +17,16 @@
 
 @media (max-width: 640px) {
   .picture {
-    max-width: 480px;
+    max-width: 360px;
     width: 100%;
-    max-height: 320px;
+    max-height: 240px;
     height: 100%;
   }
 
   .item figure img {
-    max-width: 480px;
+    max-width: 360px;
     width: 100% !important;
-    max-height: 320px;
+    max-height: 240px;
     height: 100%;
   }
 }
