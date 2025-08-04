@@ -92,7 +92,6 @@ main {
   position: absolute;
   font-weight: 100;
   pointer-events: none;
-  -webkit-appearance: none;
 }
 
 .theme-info p {
