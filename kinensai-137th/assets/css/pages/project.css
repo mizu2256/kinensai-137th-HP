@@ -82,19 +82,21 @@ main {
   padding: auto;
 }
 
-.kodo-more {
+.kodo-more,.class-more {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-.kodo-more.show-animation {
+.kodo-more.show-animation,
+.class-more.show-animation {
   max-height: 2000px;
   opacity: 1;
 }
 
-.kodo-more p {
+.kodo-more p,
+.class-more p {
   font-size: var(--sbFont);
 }
 
