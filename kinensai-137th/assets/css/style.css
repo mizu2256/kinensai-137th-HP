@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
 
 /* 全体設定・ファイル全体改変禁止 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 /* 環境変数 */
@@ -23,12 +24,12 @@
   --xltFont: 48px;
 
   /* 色の指定 */
-  --colorI: rgb(240,240,240);
-  --colorII: rgb(36,36,188);
+  --colorI: rgb(240, 240, 240);
+  --colorII: rgb(36, 36, 188);
 
   /* フォント */
-  --fontI: "Zen Antique Soft",serif;
-  --fontII: "Alex Brush",serif;
+  --fontI: "Zen Antique Soft", serif;
+  --fontII: "Alex Brush", serif;
   --fontIII: sans-serif;
 }
 
