@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const scrollableHeight = fullPageHeight - headerHeight - footerHeight;
 
-    const PageHeight = scrollableHeight / 3;
+    const PageHeight = scrollableHeight / 4;
 
     let currentIndex = 0;
 
