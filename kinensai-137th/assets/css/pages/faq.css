@@ -1,6 +1,6 @@
 /* ここから編集 */
 :root {
- --y: 12px;
+  --y: 12px;
 }
 
 main {
@@ -21,11 +21,43 @@ input {
 }
 
 .submitting {
+  padding: 0 15px;
+  font-size: var(--mbFont);
+  text-align: center;
   display: none;
 }
 
 .thanks {
+  padding: 0 15px;
+  font-size: var(--mbFont);
+  text-align: center;
   display: none;
+}
+
+.return {
+  font-size: var(--mbFont);
+  display: none;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.return>a {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: var(--mbFont);
+  padding: 7px 15px;
+  border-radius: 3px;
+  border: none;
+  background-color: blue;
+  color: white;
+  transition: linear 0.1s background-color;
+  cursor: pointer;
+  width: 200px;
+}
+
+.return>a:hover {
+  background-color: rgb(64, 64, 255);
 }
 
 .main {
