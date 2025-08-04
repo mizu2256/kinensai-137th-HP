@@ -125,16 +125,16 @@ main {
 }
 
 .picture {
-  width: 480px;
-  height: 320px;
+  width: 360px;
+  height: 240px;
   margin: 0 auto;
 }
 
 .item figure img {
   margin: 0 auto;
   padding: 0 1px;
-  width: 480px !important;
-  height: 320px;
+  width: 360px !important;
+  height: 240px;
   object-fit: cover;
   border-radius: 20px;
   overflow: hidden;
