@@ -1,4 +1,7 @@
 @media (max-width: 960px) {
+  .theme-info h2 {
+    font-size: 90px;
+  }
   .theme-info p {
     font-size: var(--mbFont);
   }
@@ -15,7 +18,7 @@
   }
 
   .theme-info h2 {
-    font-size: 80px;
+    font-size: 76px;
   }
 }
 
@@ -29,7 +32,7 @@
   }
 
   .theme-info h2 {
-    font-size: 60px;
+    font-size: 56px;
   }
 }
 
