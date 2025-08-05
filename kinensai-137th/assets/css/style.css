@@ -26,6 +26,7 @@
   /* 色の指定 */
   --colorI: rgb(240, 240, 240);
   --colorII: rgb(36, 36, 188);
+  --colorIII: rgb(144,144,188);
 
   /* フォント */
   --fontI: "Zen Antique Soft", serif;

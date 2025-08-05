@@ -66,5 +66,5 @@ header {
 }
 
 .nav-links ul li a:hover {
-  border-bottom: 2px solid var(--colorII);
+  border-bottom: 2px solid var(--colorIII);
 }
