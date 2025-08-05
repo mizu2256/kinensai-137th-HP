@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/components/footer.css">
     <link rel="stylesheet" href="assets/css/components/header-media.css">
     <link rel="stylesheet" href="assets/css/components/footer-media.css">
+    <link rel="stylesheet" href="assets/css/media/info-media.css">
     <link rel="stylesheet" href="assets/css/pages/info.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -43,6 +44,7 @@
                 if (isshwing[id]) {
                     //もしidのqa-boxが表示されていたら
                     //そのqa-boxを非表示にする
+                    height[id] = $('#'+id).children('.qa-answer').eq(0).height();
                     $(this).removeClass("shwing");
                     $(this).parent().removeClass("showing");
                     $(this).parent().children(".qa-answer").eq(0).css("margin-bottom","0px");
@@ -137,7 +139,7 @@
                     </div>
                     <div class="qa-box" id="0">
                         <div class="qa-title">
-                            <h3>Q. 事前予約は必要ですか？</h3>
+                            <h3><div>Q.</div><div>事前予約は必要ですか？</div></h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -148,7 +150,7 @@
                     </div>
                     <div class="qa-box" id="1">
                         <div class="qa-title">
-                            <h3>Q. 校内に休憩所はありますか？</h3>
+                            <h3><div>Q.</div><div>校内に休憩所はありますか？</div></h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -160,7 +162,7 @@
                     </div>
                     <div class="qa-box" id="2">
                         <div class="qa-title">
-                            <h3>Q. 学校内での写真、動画の撮影は可能ですか？</h3>
+                            <h3><div>Q.</div><div>学校内での写真、動画の撮影は可能ですか？</div></h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -173,7 +175,7 @@
                     </div>
                     <div class="qa-box" id="3">
                         <div class="qa-title">
-                            <h3>Q. 自販機はありますか？</h3>
+                            <h3><div>Q.</div><div>自販機はありますか？</div></h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -185,7 +187,7 @@
                     </div>
                     <div class="qa-box" id="4">
                         <div class="qa-title">
-                            <h3>Q. 女子トイレはありますか？</h3>
+                            <h3><div>Q.</div><div>女子トイレはありますか？</div></h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
