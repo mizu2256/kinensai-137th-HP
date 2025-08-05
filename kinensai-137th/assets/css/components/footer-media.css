@@ -1,4 +1,8 @@
 @media (max-width: 960px) {
+  .footer-con {
+    padding: 15px 0 20px;
+  }
+
   .footer-info {
     display: block;
     text-align: center;
