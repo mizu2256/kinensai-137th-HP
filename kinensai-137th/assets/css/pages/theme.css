@@ -76,6 +76,15 @@ main {
   position: relative;
 }
 
+.bon_voyage {
+  background-image: url(../../pictures/pages/theme/bon-voyage.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+  margin: 40px 0 140px 0;
+}
+
+/*
 .theme-info h2 {
   color: black;
   position: relative;
@@ -100,6 +109,7 @@ main {
   transform: translate(-50%, -50%) translateZ(0);
   z-index: 2;
 }
+*/
 
 .theme-info p {
   font-size: var(--xstFont);
