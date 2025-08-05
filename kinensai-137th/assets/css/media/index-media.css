@@ -13,29 +13,6 @@
 }
 
 @media (max-width: 1150px) {
-  .attention-title img {
-    width: 56px;
-    height: 56px;
-  }
-
-  .attention-title h1 {
-    font-size: var(--ltFont);
-    margin-right: 40px;
-  }
-
-  .one-attention img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .attention-detail h2 {
-    font-size: var(--stFont);
-  }
-
-  .attention-detail h3 {
-    font-size: var(--mbFont);
-  }
-
   .required-minutes {
     display: block;
   }
@@ -44,15 +21,6 @@
 @media (max-width: 960px) {
   .background-text {
     font-size: 90px;
-  }
-
-  .attention-con {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .attention-title h1 {
-    margin: 0 15px;
   }
 
   .access-title {
@@ -91,42 +59,6 @@
     font-size: 75px;
   }
 
-  .one-attention img {
-    width: 64px;
-    height: 64px;
-  }
-
-  .attention-center h2,
-  .attention-center h3 {
-    border-bottom: 3px solid #b3000000;
-    animation: fadeInUp2 2s ease-out 2s forwards;
-  }
-
-  @keyframes fadeInUp2 {
-    to {
-      border-bottom: 3px solid #b30000ff;
-    }
-  }
-
-  .one-attention {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    padding-bottom: 30px;
-  }
-
-  .one-attention img {
-    margin: 0;
-  }
-
-  .attention-detail h2 {
-    font-size: var(--lbFont);
-  }
-
-  .attention-detail h3 {
-    font-size: var(--sbFont);
-  }
-
   .access-detail {
     flex-direction: column;
   }
@@ -151,10 +83,6 @@
 }
 
 @media (max-width: 450px) {
-  .media-spacer {
-    display: block;
-  }
-
   .wh-kinen-box {
     padding: 10px;
   }
@@ -169,10 +97,6 @@
 }
 
 @media (max-width: 350px) {
-  .one-attention h2 {
-    font-size: var(--mbFont);
-  }
-
   .slider,
   .slider figure img {
     height: 160px;
