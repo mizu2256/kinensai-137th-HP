@@ -22,6 +22,7 @@ main h3 {
 .dl-link p {
   font-size: var(--lbFont);
   cursor: not-allowed;
+  user-select: none;
   color: black;
 }
 
