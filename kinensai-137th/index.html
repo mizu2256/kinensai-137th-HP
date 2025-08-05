@@ -7,9 +7,6 @@
     <title>137周年記念祭 - ホーム</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/components/header.css">
-
-    <link rel="stylesheet" href="assets/css/components/header-media.css">
 
     <link rel="stylesheet" href="assets/css/pages/index.css" media="print" onload="this.media='all'">
     <noscript>
@@ -28,6 +25,75 @@
     <link rel="prefetch" href="theme.html">
 
     <style>
+        header {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 10;
+            background-color: #fff;
+            position: fixed;
+        }
+
+        .header-con {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .header-con .main-logo a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-con .main-logo a img {
+            width: 48px;
+            height: 48px;
+            margin-top: 3px;
+        }
+
+        .header-con .main-logo a h1 {
+            font-size: var(--mtFont);
+            font-family: var(--fontI);
+            font-weight: 500;
+            color: black;
+        }
+
+        .burger-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger-menu i {
+            font-size: var(--stFont);
+        }
+
+        .nav-con {
+            display: none;
+        }
+
+        .nav-links {
+            position: relative;
+        }
+
+        .nav-links ul {
+            display: flex;
+            gap: 60px;
+        }
+
+        .nav-links ul li a {
+            color: black;
+            padding: 2px;
+            transition: border-bottom 0.4s ease;
+            border-bottom: 2px solid rgba(0, 0, 0, 0);
+        }
+
+        .nav-links ul li a:hover {
+            border-bottom: 2px solid var(--colorIII);
+        }
+
         main {
             padding: 72px 0 36px;
             flex-grow: 1;
@@ -105,7 +171,63 @@
             font-size: var(--mtFont);
         }
 
+        @media (min-width: 961px) {
+            .nav-con {
+                display: flex;
+            }
+        }
+
         @media (max-width: 960px) {
+            .burger-menu {
+                display: flex;
+            }
+
+            .burger-menu .toggle-burger {
+                display: none;
+            }
+
+            .burger-menu .toggle-burger.active {
+                display: block;
+            }
+
+            .nav-con {
+                opacity: 0;
+                pointer-events: none;
+                background-color: white;
+                display: flex;
+                position: absolute;
+                top: 72px;
+                right: 0px;
+                width: 100%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+
+            .nav-con.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav-con.show,
+            .nav-con.hide {
+                transition: opacity 0.5s ease;
+            }
+
+            .nav-links {
+                width: 100%;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .nav-links ul li a {
+                display: block;
+                width: 100%;
+            }
+
             .title {
                 background-color: rgba(255, 255, 255, 0.7);
             }
@@ -204,8 +326,8 @@
     <link rel="stylesheet" href="assets/css/components/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
-        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" media="print"
+        onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="assets/css/media/index-media.css">
         <link rel="stylesheet" href="assets/css/components/footer.css">
