@@ -2,6 +2,7 @@
 /* ここから編集 */
 main {
   padding: 72px 0 0;
+  font-family: var(--fontIII);
 }
 
 .spacer {
