@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 512px) {
+@media (min-width: 513px) {
     .box > .explanation {
         width: 50%;
     }
