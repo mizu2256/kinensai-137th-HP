@@ -39,25 +39,53 @@ main {
   border: solid 3px;
   border-radius: 20px;
   user-select: none;
+  transition: linear 0.1s height;
+}
+
+.qa-box.showing {
+  height: 100%;
 }
 
 .qa-title {
-  border-bottom: solid 1px rgb(245, 247, 250);
+  margin-bottom: 0px;
+  transition: linear 0.1s margin-bottom;
+}
+
+.qa-title.shwing {
   margin-bottom: 24px;
 }
 
 .qa-title h3 {
+  cursor: pointer;
   font-size: var(--xstFont);
+  border-bottom: solid 2px transparent;
+  padding-bottom: 0;
+  transition: linear 0.1s border-bottom, linear 0.1s padding-bottom;
+}
+
+.qa-title h3.vis {
   border-bottom: solid 2px black;
   padding-bottom: 10px;
+}
+
+.qa-title h3::before {
+  content: "▶";
+  font-size: var(--mbFont);
+  position: absolute;
+  transform: translate(-30px, 5px);
+  transition: linear 0.1s transform;
+}
+
+.qa-title h3.vis::before {
+  transform: translate(-30px, 5px) rotate(90deg);
 }
 
 .qa-answer {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  cursor: pointer;
   position: relative;
+  transition: linear 0.1s color;
 }
 
 .qa-answer h3 {
@@ -75,4 +103,9 @@ main {
 .answer-content-wrap {
   display: flex;
   flex-direction: column;
+}
+
+/*これは必ず最後に置く*/
+.hidden {
+  display: none;
 }
