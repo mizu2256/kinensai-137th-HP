@@ -1,41 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const backgroundImages = document.querySelectorAll('.bg-image');
-    const header = document.querySelector('header');
-    const footer = document.querySelector('footer');
+document.addEventListener("DOMContentLoaded", () => {
+  const backgroundImages = document.querySelectorAll(".bg-image");
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
 
-    const headerHeight = header ? header.offsetHeight : 0;
-    const footerHeight = footer ? footer.offsetHeight : 0;
-    
-    const fullPageHeight = document.documentElement.scrollHeight;
-    
-    const scrollableHeight = fullPageHeight - headerHeight - footerHeight;
+  const headerHeight = header ? header.offsetHeight : 0;
+  const footerHeight = footer ? footer.offsetHeight : 0;
 
-    const PageHeight = scrollableHeight / 4;
+  const fullPageHeight = document.documentElement.scrollHeight;
 
-    let currentIndex = 0;
+  const scrollableHeight = fullPageHeight - headerHeight - footerHeight;
 
-    backgroundImages[currentIndex].classList.add('active');
+  const PageHeight = scrollableHeight / 4;
 
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        
-        const adjustedScrollY = scrollY - headerHeight;
+  let currentIndex = 0;
 
-        let newIndex = 0;
-        if (adjustedScrollY > 0) {
-             newIndex = Math.floor(adjustedScrollY / PageHeight);
-        }
+  backgroundImages[currentIndex].classList.add("active");
 
-        if (newIndex >= backgroundImages.length) {
-            newIndex = backgroundImages.length - 1;
-        } else if (newIndex < 0) {
-            newIndex = 0;
-        }
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
 
-        if (newIndex !== currentIndex) {
-            backgroundImages[currentIndex].classList.remove('active');
-            backgroundImages[newIndex].classList.add('active');
-            currentIndex = newIndex;
-        }
-    });
+    const adjustedScrollY = scrollY - headerHeight;
+
+    let newIndex = 0;
+    if (adjustedScrollY > 0) {
+      newIndex = Math.floor(adjustedScrollY / PageHeight);
+    }
+
+    if (newIndex >= backgroundImages.length) {
+      newIndex = backgroundImages.length - 1;
+    } else if (newIndex < 0) {
+      newIndex = 0;
+    }
+
+    if (newIndex !== currentIndex) {
+      backgroundImages[currentIndex].classList.remove("active");
+      backgroundImages[newIndex].classList.add("active");
+      currentIndex = newIndex;
+    }
+  });
 });
