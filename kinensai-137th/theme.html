@@ -25,6 +25,50 @@
     <link rel="prefetch" href="project.html">
     <link rel="prefetch" href="theme.html">
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const backgroundImages = document.querySelectorAll('.bg-image');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const footerHeight = footer ? footer.offsetHeight : 0;
+
+            const fullPageHeight = document.documentElement.scrollHeight;
+
+            const scrollableHeight = fullPageHeight - headerHeight - footerHeight;
+
+            const PageHeight = scrollableHeight / 4;
+
+            let currentIndex = 0;
+
+            backgroundImages[currentIndex].classList.add('active');
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+
+                const adjustedScrollY = scrollY - headerHeight;
+
+                let newIndex = 0;
+                if (adjustedScrollY > 0) {
+                    newIndex = Math.floor(adjustedScrollY / PageHeight);
+                }
+
+                if (newIndex >= backgroundImages.length) {
+                    newIndex = backgroundImages.length - 1;
+                } else if (newIndex < 0) {
+                    newIndex = 0;
+                }
+
+                if (newIndex !== currentIndex) {
+                    backgroundImages[currentIndex].classList.remove('active');
+                    backgroundImages[newIndex].classList.add('active');
+                    currentIndex = newIndex;
+                }
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -70,7 +114,12 @@
                     <div class="theme-info">
                         <h1>テーマ解説</h1>
                         <h2>Bon Voyage</h2>
-                        <p>フランス語で「良い旅を」という意味である「Bon Voyage」。記念祭に足を運べば、あなたは旅に身を投じることとなる。<span class="spacer"></span>あなたのこの瞬間の旅は、あなただけのものだ。同じ航路の船旅でも、ある時は穏やかな海を見られるが、ある時は荒波が襲いかかる。また海に対して畏怖の念を抱く者もいれば、希望を読み取る者もいる。<span class="spacer"></span>今年の記念祭、この二日間だけの記念祭であなたは何を感じるだろうか。企画の数々に熱中するかもしれないし、校内装飾に心を奪われるかもしれない。何も得ずに帰ってしまうこともまた旅である。<span class="spacer"></span>一方で、東海生は開催のずっと前から準備を続けている。各クラスで企画を練ったり、パフォーマンスの練習をしたり、裏方として他の生徒を支えたりしながら当日に備えている。記念祭の開催日は東海生にとって旅の終着点だ。<span class="spacer"></span>あなたが旅を楽しむと同時に、旅を終えた私たちを温かい拍手で迎えてほしいと願う。東海生は長い旅を終えようとしているのだ。その終わりを見届けてほしい。<span class="spacer"></span>あなたの航海も、私たちの航海もかけがえの無いものとなるように。<span class="spacer"></span>良い旅を！
+                        <p>フランス語で「良い旅を」という意味である「Bon Voyage」。記念祭に足を運べば、あなたは旅に身を投じることとなる。<span
+                                class="spacer"></span>あなたのこの瞬間の旅は、あなただけのものだ。同じ航路の船旅でも、ある時は穏やかな海を見られるが、ある時は荒波が襲いかかる。また海に対して畏怖の念を抱く者もいれば、希望を読み取る者もいる。<span
+                                class="spacer"></span>今年の記念祭、この二日間だけの記念祭であなたは何を感じるだろうか。企画の数々に熱中するかもしれないし、校内装飾に心を奪われるかもしれない。何も得ずに帰ってしまうこともまた旅である。<span
+                                class="spacer"></span>一方で、東海生は開催のずっと前から準備を続けている。各クラスで企画を練ったり、パフォーマンスの練習をしたり、裏方として他の生徒を支えたりしながら当日に備えている。記念祭の開催日は東海生にとって旅の終着点だ。<span
+                                class="spacer"></span>あなたが旅を楽しむと同時に、旅を終えた私たちを温かい拍手で迎えてほしいと願う。東海生は長い旅を終えようとしているのだ。その終わりを見届けてほしい。<span
+                                class="spacer"></span>あなたの航海も、私たちの航海もかけがえの無いものとなるように。<span class="spacer"></span>良い旅を！
                     </div>
                 </div>
             </div>
@@ -106,7 +155,6 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/theme.js"></script>
     <script src="assets/js/components/header.js"></script>
 </body>
 
