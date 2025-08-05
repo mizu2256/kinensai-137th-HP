@@ -33,7 +33,7 @@
             var i = 0;
             var bool = true;
             while (bool) {
-                var h = $('#'+i).children('.qa-answer').eq(0).height();
+                var h = $('#' + i).children('.qa-answer').eq(0).height();
                 if (h == undefined) bool = false; else height[i] = h;
                 i++;
             }
@@ -44,19 +44,19 @@
                 if (isshwing[id]) {
                     //もしidのqa-boxが表示されていたら
                     //そのqa-boxを非表示にする
-                    height[id] = $('#'+id).children('.qa-answer').eq(0).height();
+                    height[id] = $('#' + id).children('.qa-answer').eq(0).height();
                     $(this).removeClass("shwing");
                     $(this).parent().removeClass("showing");
-                    $(this).parent().children(".qa-answer").eq(0).css("margin-bottom","0px");
+                    $(this).parent().children(".qa-answer").eq(0).css("margin-bottom", "0px");
                     $(this).parent().children(".qa-answer").eq(0).animate(
                         {
                             opacity: 0,
-                            "margin-bottom": (-height[id])+"px"
+                            "margin-bottom": (-height[id]) + "px"
                         },
                         100,
                         "linear",
                         function () {
-                            $(this).parent().children(".qa-answer").eq(0).css('display','none');
+                            $(this).parent().children(".qa-answer").eq(0).css('display', 'none');
                         }
                     );
                     $(this).children('h3').eq(0).removeClass("vis");
@@ -66,7 +66,7 @@
                     //そのqa-boxを表示する
                     $(this).addClass("shwing");
                     $(this).parent().addClass("showing");
-                    $(this).parent().children(".qa-answer").eq(0).css('display','flex').css("margin-bottom",(-height[id])+"px");
+                    $(this).parent().children(".qa-answer").eq(0).css('display', 'flex').css("margin-bottom", (-height[id]) + "px");
                     $(this).parent().children(".qa-answer").eq(0).animate(
                         {
                             opacity: 1,
@@ -82,6 +82,7 @@
         });
     </script>
 
+    <script src="assets/js/components/header.js"></script>
 </head>
 
 <body>
@@ -139,7 +140,10 @@
                     </div>
                     <div class="qa-box" id="0">
                         <div class="qa-title">
-                            <h3><div>Q.</div><div>事前予約は必要ですか？</div></h3>
+                            <h3>
+                                <div>Q.</div>
+                                <div>事前予約は必要ですか？</div>
+                            </h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -150,7 +154,10 @@
                     </div>
                     <div class="qa-box" id="1">
                         <div class="qa-title">
-                            <h3><div>Q.</div><div>学校内での写真、動画の撮影は可能ですか？</div></h3>
+                            <h3>
+                                <div>Q.</div>
+                                <div>学校内での写真、動画の撮影は可能ですか？</div>
+                            </h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -163,7 +170,10 @@
                     </div>
                     <div class="qa-box" id="2">
                         <div class="qa-title">
-                            <h3><div>Q.</div><div>自販機はありますか？</div></h3>
+                            <h3>
+                                <div>Q.</div>
+                                <div>自販機はありますか？</div>
+                            </h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -175,7 +185,10 @@
                     </div>
                     <div class="qa-box" id="3">
                         <div class="qa-title">
-                            <h3><div>Q.</div><div>女子トイレはありますか？</div></h3>
+                            <h3>
+                                <div>Q.</div>
+                                <div>女子トイレはありますか？</div>
+                            </h3>
                         </div>
                         <div class="qa-answer">
                             <h3 class="answer-large">A.</h3>
@@ -228,7 +241,6 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/components/header.js"></script>
 </body>
 
 </html>
