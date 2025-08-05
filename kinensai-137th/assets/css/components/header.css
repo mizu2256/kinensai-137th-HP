@@ -26,7 +26,7 @@ header {
 .header-con .main-logo a img {
   width: 48px;
   height: 48px;
-  padding-top: 3px;
+  margin-top: 3px;
 }
 
 .header-con .main-logo a h1 {
