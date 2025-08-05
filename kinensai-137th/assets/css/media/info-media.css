@@ -95,4 +95,8 @@
   .inv {
     display: none;
   }
+
+  .form-link-con {
+    text-align: center;
+  }
 }
