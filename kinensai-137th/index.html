@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>137周年記念祭 - ホーム</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-
     <link rel="stylesheet" href="assets/css/pages/index.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" media="print"
+        onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="assets/css/pages/index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap">
     </noscript>
 
     <link rel="shortcut icon" href="assets/pictures/common/favicon.ico" type="image/x-icon" sizes="any">
@@ -25,6 +26,56 @@
     <link rel="prefetch" href="theme.html">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        :root {
+            /* 文字の大きさ・文章 */
+            --sbFont: 16px;
+            --mbFont: 19px;
+            --lbFont: 22px;
+
+            /* 文字の大きさ・タイトル */
+            --xstFont: 24px;
+            --stFont: 30px;
+            --mtFont: 36px;
+            --ltFont: 42px;
+            --xltFont: 48px;
+
+            /* 色の指定 */
+            --colorI: rgb(240, 240, 240);
+            --colorII: rgb(36, 36, 188);
+            --colorIII: rgb(144, 144, 188);
+
+            /* フォント */
+            --fontI: "Zen Antique Soft", serif;
+            --fontII: "Alex Brush", serif;
+            --fontIII: sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a,
+        li {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 5% 0;
+        }
+
         header {
             display: flex;
             width: 100%;
@@ -322,20 +373,19 @@
         }
     </style>
 
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="assets/css/media/index-media.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="assets/css/components/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" media="print"
         onload="this.media='all'">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" media="print"
-        onload="this.media='all'">
     <noscript>
+        <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/media/index-media.css">
         <link rel="stylesheet" href="assets/css/components/footer.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap">
     </noscript>
 </head>
 
