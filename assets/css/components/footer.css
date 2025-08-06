@@ -4,6 +4,7 @@ footer {
   border-top: 2px solid var(--colorII);
   background-color: rgb(204, 204, 204);
   position: relative;
+  font-family: var(--fontIII);
 }
 
 .footer-con {
