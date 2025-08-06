@@ -55,7 +55,7 @@ li {
 }
 
 .inv {
-  opacity: 0.1;
+  opacity: .07;
   position: fixed;
   top: 50%;
   left: 50%;
