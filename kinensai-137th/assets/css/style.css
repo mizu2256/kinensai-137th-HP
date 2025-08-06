@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
+  -webkit-appearance: none;
 }
 
 /* 環境変数 */
@@ -26,7 +27,7 @@
   /* 色の指定 */
   --colorI: rgb(240, 240, 240);
   --colorII: rgb(36, 36, 188);
-  --colorIII: rgb(144,144,188);
+  --colorIII: rgb(144, 144, 188);
 
   /* フォント */
   --fontI: "Zen Antique Soft", serif;
