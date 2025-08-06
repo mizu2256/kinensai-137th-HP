@@ -68,7 +68,7 @@ main {
 }
 
 .qa-title h3::before {
-  content: "▶";
+  content: "▶︎";
   position: absolute;
   transition: linear 0.1s transform;
 }

@@ -60,6 +60,10 @@ input {
   background-color: rgb(64, 64, 255);
 }
 
+.return > a > div:first-child {
+  transform: translateY(2px) rotate(180deg);
+}
+
 .main {
   display: flex;
   justify-content: center;
