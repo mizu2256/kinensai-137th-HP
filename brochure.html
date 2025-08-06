@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="assets/css/components/header.css">
     <link rel="stylesheet" href="assets/css/components/footer.css">
     <link rel="stylesheet" href="assets/css/components/header-media.css">
-    <link rel="stylesheet" href="assets/css/pages/brochure.css">
-    <link rel="stylesheet" href="assets/css/media/brochure-media.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -24,6 +22,60 @@
     <link rel="prefetch" href="..//project/project.html">
     <link rel="prefetch" href="..//theme/theme.html">
 
+    <style>
+        main {
+            padding: 72px 0 36px;
+            flex-grow: 1;
+            font-family: var(--fontIII);
+        }
+
+        main h2 {
+            font-size: var(--mtFont);
+            text-align: center;
+        }
+
+        main h3 {
+            font-size: var(--stFont);
+            text-align: center;
+        }
+
+        .dl-link {
+            text-align: center;
+        }
+
+        .dl-link p {
+            font-size: var(--lbFont);
+            cursor: not-allowed;
+            user-select: none;
+            color: black;
+        }
+
+        .dl-link a {
+            display: none;
+        }
+
+        /* media */
+
+        @media (max-width: 600px) {
+            main h2 {
+                font-size: var(--xstFont);
+            }
+
+            main h3 {
+                font-size: var(--mbFont);
+            }
+
+            .dl-link p {
+                font-size: var(--mbFont);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .media-spacer {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
