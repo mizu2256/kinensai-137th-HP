@@ -1,0 +1,119 @@
+/* 環境変数・改変禁止 */
+/* ここから編集 */
+main {
+  padding: 72px 0 0;
+  font-family: var(--fontIII);
+}
+
+.spacer {
+  display: block;
+  height: 180px;
+}
+
+#theme {
+  min-height: 615px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.theme-con {
+  position: relative;
+  max-width: 1215px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* theme bg */
+.theme-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  filter: brightness(1.5);
+}
+
+.bg-image1 {
+  background-image: url(../../pictures/pages/theme/theme-bg-1.webp);
+}
+
+.bg-image2 {
+  background-image: url(../../pictures/pages/theme/theme-bg-2.webp);
+}
+
+.bg-image3 {
+  background-image: url(../../pictures/pages/theme/theme-bg-3.webp);
+}
+
+.bg-image.active {
+  opacity: 1;
+}
+
+/* theme info */
+.theme-info {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.theme-info h1 {
+  font-size: var(--ltFont);
+  position: relative;
+}
+
+.bon_voyage {
+  background-image: url(../../pictures/pages/theme/bon-voyage.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+  margin: 40px 0 140px 0;
+}
+
+/*
+.theme-info h2 {
+  color: black;
+  position: relative;
+  font-weight: 900;
+  text-shadow: black 2px 5px 5px;
+  font-size: 100px;
+  font-family: var(--fontII);
+  padding: 40px 0;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+.theme-info h2::before {
+  content: "Bon Voyage";
+  color: white;
+  position: absolute;
+  font-weight: 100;
+  width: 100%;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  z-index: 2;
+}
+*/
+
+.theme-info p {
+  font-size: var(--xstFont);
+  line-height: 160%;
+  margin-bottom: 100px;
+}

@@ -1,0 +1,48 @@
+/* 全体設定・ファイル全体改変禁止 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 環境変数 */
+:root {
+  /* 文字の大きさ・文章 */
+  --sbFont: 16px;
+  --mbFont: 19px;
+  --lbFont: 22px;
+
+  /* 文字の大きさ・タイトル */
+  --xstFont: 24px;
+  --stFont: 30px;
+  --mtFont: 36px;
+  --ltFont: 42px;
+  --xltFont: 48px;
+
+  /* 色の指定 */
+  --colorI: rgb(240,240,240);
+  --colorII: rgb(36,36,188);
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 5% 0;
+}
+
+.inv {
+  opacity: 0.1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 216px;
+  color: var(--colorII);
+}

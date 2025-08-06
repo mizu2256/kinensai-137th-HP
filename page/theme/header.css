@@ -1,26 +1,13 @@
 /* ファイル全体改変禁止 */
-/* 環境変数 */
-:root {
-  /* 文字の大きさ・文章 */
-  --SbFont: 16px;
-  --MbFont: 19px;
-  --LbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --XStFont: 24px;
-  --StFont: 30px;
-  --MtFont: 36px;
-  --LtFont: 42px;
-  --XLtFont: 48px;
-}
-
-
-
 /* ヘッダーの設定 */
 header {
   display: flex;
+  width: 100%;
   align-items: center;
   padding: 0 10px;
+  z-index: 10;
+  background-color: #fff;
+  position: fixed;
 }
 
 .header-con {
@@ -37,13 +24,13 @@ header {
 }
 
 .header-con .main-logo a img {
-  width: 36px;
-  height: 39px;
+  width: 48px;
+  height: 48px;
   padding-top: 3px;
 }
 
 .header-con .main-logo a h1 {
-  font-size: var(--MtFont);
+  font-size: var(--mtFont);
   color: black;
 }  
 
@@ -61,5 +48,5 @@ header {
 }
 
 .nav-con .nav-links ul li a:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--colorII);
 }

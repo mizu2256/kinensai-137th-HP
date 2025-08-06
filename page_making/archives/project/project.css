@@ -1,0 +1,60 @@
+/* 環境変数・改変禁止 */
+:root {
+  /* 文字の大きさ・文章 */
+  --sbFont: 16px;
+  --mbFont: 19px;
+  --lbFont: 22px;
+
+  /* 文字の大きさ・タイトル */
+  --xstFont: 24px;
+  --stFont: 30px;
+  --mtFont: 36px;
+  --ltFont: 42px;
+  --xltFont: 48px;
+
+  /* 色の指定 */
+  --colorI: rgb(240, 240, 240);
+  --colorII: rgb(36, 36, 188);
+}
+
+/* ここから編集 */
+
+#top {
+  min-height: 100px;
+}
+
+.top-con {
+  text-align: center;
+}
+
+.top-info h1 {
+  font-size: var(--ltFont);
+}
+
+.project-con {
+  display: flex;
+  margin: 0 5%;
+}
+
+.info h2 {
+  margin: 5px 0;
+  font-size: var(--stFont);
+}
+
+.info p {
+  margin: 0 10px;
+  font-size: var(--mbFont);
+}
+
+#class-project,
+#stage-project,
+#kodo-project,
+#yushi-project {
+  min-height: 150px;
+}
+
+.picture figure img {
+  margin: 10px;
+  width: 480px;
+  height: 270px;
+}

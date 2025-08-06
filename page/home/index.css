@@ -1,31 +1,363 @@
-/* 環境変数・改変禁止 */
-:root {
-  /* 文字の大きさ・文章 */
-  --SbFont: 16px;
-  --MbFont: 19px;
-  --LbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --XStFont: 24px;
-  --StFont: 30px;
-  --MtFont: 36px;
-  --LtFont: 42px;
-  --XLtFont: 48px;
+/* トップ */
+main {
+  padding: 72px 0 36px;
+  flex-grow: 1;
 }
 
-
-#logo {
-  min-height: 1215px;
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  user-select: none;
+  pointer-events: none;
 }
 
-.schedule-con {
-  display: block;
-  width: 50%;
-}
-
-.day-con {
+#title-schedule {
   display: flex;
-  justify-content: left;
+  height: 900px;
+  background-image: url("pictures/HP.png");
+  background-size: cover;
+  background-position: right;
+}
+
+.title-con {
+  position: relative;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  text-align: right;
+  top: 45%;
+  right: 0;
+  transform: translateY(-50%);
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 30px;
+
+}
+
+.title a {
+  display: inline-block;
+  font-size: 150px;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #090180, #ff3535);
+  background-size: 600% 600%;
+  background-position: left center;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 1s ease;
+}
+
+.title a:hover {
+  background-position: right center;
+
+}
+
+.title h2 {
+  font-size: var(--ltFont);
+}
+
+.title h3 {
+  font-size: 70px;
+}
+
+.align-left {
+  text-align: left;
+  /* transform: translateX(150px); */
+  margin-left: 40px;
+
+}
+
+.saturday {
+  color: rgb(35, 0, 160);
+  font-size: var(--ltFont);
+  margin-right: 11px;
+}
+
+.sunday {
+  color: rgb(255, 0, 0);
+  font-size: var(--ltFont);
+}
+
+.time {
+  font-size: var(--mtFont);
+
+}
+
+/* 注意事項 */
+
+.attention-con {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.attention-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attention-title img {
+  width: 64px;
+  height: 64px;
+}
+
+.attention-title h1 {
+  margin-left: 20px;
+  margin-right: 60px;
+  font-size: var(--xltFont);
+}
+
+.attention-center {
+  text-align: left;
+  animation: fadeInUp 2s ease-out forwards;
+  animation-delay: 2s;
+  text-decoration: none;
+  view-timeline-name: --box;
+  view-timeline-axis: block;
+  animation-timeline: --box;
+  animation-range: entry 30% cover 50%;
+}
+
+@keyframes fadeInUp {
+  to {
+    text-decoration: underline;
+    text-decoration-color: #b30000;
+    text-decoration-thickness: 4px;
+  }
+}
+
+.one-attention img {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.one-attention {
+  display: flex;
+  margin: 10px;
+}
+
+.attention-detail h2 {
+  font-size: var(--mtFont);
+}
+
+.attention-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* アクセス */
+
+#access h1 {
+  margin: 20px;
+  font-size: var(--mtFont);
+}
+
+.access-title {
+  display: flex;
+  align-items: center;
+}
+
+.access-con {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 50px;
   margin: 5px auto;
+}
+
+.map {
+  width: 100%;
+  border: 0;
+  max-width: 500px;
+
+}
+
+.access-detail h2 {
+  font-size: var(--ltFont);
+}
+
+.access-detail {
+  display: flex;
+  /* またはrowでも構成による */
+  align-items: center;
+  /* 横方向の中央揃え */
+  justify-content: center;
+  /* 縦方向の中央揃え（子が複数なら効果あり） */
+
+}
+
+.station-name span {
+  font-size: var(--mbFont);
+}
+
+.station-name {
+  line-height: 1;
+}
+
+.required-minutes {
+  display: flex;
+}
+
+.required-minutes span {
+  font-size: 100px;
+  color: rgb(16, 0, 73);
+}
+
+.toho {
+  transform: translateY(-30px);
+}
+
+.higashiyama {
+  border-left: 2px solid rgb(35, 0, 160);
+  margin-left: 20px;
+  padding-left: 20px;
+
+}
+
+/* 記念祭とは */
+
+.wh-kinen-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wh-kinen-box {
+  position: relative;
+  min-height: 300px;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  padding: 20px;
+  background-color: rgb(227, 244, 247);
+  border-radius: 20px;
+
+}
+
+.wh-kinen-box p {
+  margin: 10px;
+  font-size: var(--mbFont);
+  padding: 20px;
+}
+
+.wh-kinen-box h2 {
+  margin: 10px;
+}
+
+.wh-kinen-group {
+  display: flex;
+}
+.slider img {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.photo1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.slide {
+  opacity: 0;
+  animation: fade 9s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.align-right {
+  margin: 10px;
+  text-align: right;
+}
+
+.wh-kinen-box a {
+  display: inline-block;
+  font-size: var(--lbFont);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--colorII);
+  transition: all 0.5s;
+
+}
+
+.wh-kinen-box a:hover {
+  opacity: 1;
+  visibility: visible;
+  color: blueviolet;
+}
+
+.wh-kinen-box a:hover .direction {
+  opacity: 1;
+  visibility: visible;
+  color: blueviolet;
+  font-size: var(--lbFont);
+}
+
+.direction {
+  visibility: hidden;
+  opacity: 0;
+  color: var(--colorII);
+  font-size: var(--sbFont);
+  transition: all 0.5s;
+
 }

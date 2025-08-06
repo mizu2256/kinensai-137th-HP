@@ -1,0 +1,59 @@
+/* ファイル全体改変禁止 */
+/* フッターの設定 */
+footer {
+  border-top: 2px solid var(--colorII);
+  background-color: rgb(204, 204, 204);
+  position: relative;
+}
+
+.footer-con {
+  padding: 8px 0 10px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tokai-info {
+  margin: auto 0;
+}
+
+.tokai-info h2 {
+  font-size: var(--stFont);
+}
+
+.tokai-info p {
+  font-size: var(--mbFont);
+}
+
+.trip-to-tokai {
+  margin: auto 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.trip-to-tokai p {
+  opacity: 0.6;
+  font-size: var(--stFont);
+  color: var(--colorII);
+}
+
+.follow-us h2 {
+  font-size: var(--stFont);
+}
+
+.sns {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.sns a i {
+  font-size: var(--ltFont);
+  color: black;
+}

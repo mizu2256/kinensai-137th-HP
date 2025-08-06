@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>137周年記念祭 - ご案内</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/header-media.css">
+    <link rel="stylesheet" href="assets/css/media/info-media.css">
+    <link rel="stylesheet" href="assets/css/pages/info.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="shortcut icon" href="assets/pictures/common/favicon.ico" type="image/x-icon" sizes="any">
+
+    <link rel="prefetch" href="../brochure/brochure.html">
+    <link rel="prefetch" href="../faq/faq.html">
+    <link rel="prefetch" href="../home/index.html">
+    <link rel="prefetch" href="..//info/info.html">
+    <link rel="prefetch" href="..//project/project.html">
+    <link rel="prefetch" href="..//theme/theme.html">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            var isshwing = [];
+            var height = [];
+            var i = 0;
+            var bool = true;
+            while (bool) {
+                var h = $('#' + i).children('.qa-answer').eq(0).height();
+                if (h == undefined) bool = false; else height[i] = h;
+                i++;
+            }
+            console.log(height);
+            $('.qa-answer').addClass('hidden');
+            $(document).on('click', '.qa-title', function () {
+                const id = parseInt($(this).parent().attr('id'));
+                if (isshwing[id]) {
+                    //もしidのqa-boxが表示されていたら
+                    //そのqa-boxを非表示にする
+                    height[id] = $('#' + id).children('.qa-answer').eq(0).height();
+                    $(this).removeClass("shwing");
+                    $(this).parent().removeClass("showing");
+                    $(this).parent().children(".qa-answer").eq(0).css("margin-bottom", "0px");
+                    $(this).parent().children(".qa-answer").eq(0).animate(
+                        {
+                            opacity: 0,
+                            "margin-bottom": (-height[id]) + "px"
+                        },
+                        100,
+                        "linear",
+                        function () {
+                            $(this).parent().children(".qa-answer").eq(0).css('display', 'none');
+                        }
+                    );
+                    $(this).children('h3').eq(0).removeClass("vis");
+                    isshwing[id] = false;
+                } else {
+                    //もしidのqa-boxが表示されていなかったら
+                    //そのqa-boxを表示する
+                    $(this).addClass("shwing");
+                    $(this).parent().addClass("showing");
+                    $(this).parent().children(".qa-answer").eq(0).css('display', 'flex').css("margin-bottom", (-height[id]) + "px");
+                    $(this).parent().children(".qa-answer").eq(0).animate(
+                        {
+                            opacity: 1,
+                            "margin-bottom": "0px"
+                        },
+                        100,
+                        "linear"
+                    );
+                    $(this).children('h3').eq(0).addClass("vis");
+                    isshwing[id] = true;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="header-con">
+                <div class="main-logo">
+                    <a href="index.html">
+                        <img src="assets/pictures/common/logo.webp" alt="ロゴ">
+                        <h1>記念祭</h1>
+                    </a>
+                </div>
+
+                <div id="burger-menu" class="burger-menu">
+                    <i class="fa-solid fa-bars toggle-burger open-burger active"></i>
+                    <i class="fa-solid fa-xmark toggle-burger close-burger"></i>
+                </div>
+
+                <div class="nav-con hide">
+                    <nav class="nav-links">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="project.html">企画説明</a></li>
+                            <li><a href="theme.html">テーマ解説</a></li>
+                            <li><a href="brochure.html">パンフレット</a></li>
+                            <li><a href="info.html">ご案内</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ここから編集 -->
+    <main>
+        <div class="wrapper">
+            <div class="info-con">
+                <h1>ご案内<span class="inv">INFO</span></h1>
+            </div>
+        </div>
+        <section id="updates">
+            <div class="wrapper">
+                <div class="updates-con">
+                    <div class="updates-info">
+                        <h2>最新情報</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="q-a">
+            <div class="wrapper">
+                <div class="qa-con">
+                    <div class="qa-info">
+                        <h2>よくある質問</h2>
+                    </div>
+                    <div class="qa-box" id="0">
+                        <div class="qa-title">
+                            <h3>
+                                <div>Q.</div>
+                                <div>事前予約は必要ですか？</div>
+                            </h3>
+                        </div>
+                        <div class="qa-answer">
+                            <h3 class="answer-large">A.</h3>
+                            <div class="answer-content-wrap">
+                                <p class="answer-check hide">不要です。当日校内を散策して、気になる企画に入ってみてください！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qa-box" id="1">
+                        <div class="qa-title">
+                            <h3>
+                                <div>Q.</div>
+                                <div>学校内での写真、動画の撮影は可能ですか？</div>
+                            </h3>
+                        </div>
+                        <div class="qa-answer">
+                            <h3 class="answer-large">A.</h3>
+                            <div class="answer-content-wrap">
+                                <p class="answer-check hide">はい。全ての場所・企画において、写真や動画の撮影が可能になっています。<span
+                                        style="text-decoration: underline;">ただし、個人が特定できるような写真・動画をSNSにアップロードすることはお控えください。</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qa-box" id="2">
+                        <div class="qa-title">
+                            <h3>
+                                <div>Q.</div>
+                                <div>自販機はありますか？</div>
+                            </h3>
+                        </div>
+                        <div class="qa-answer">
+                            <h3 class="answer-large">A.</h3>
+                            <div class="answer-content-wrap">
+                                <p class="answer-check hide">
+                                    中学校舎1階と高校校舎1階の2箇所にございます。詳細な位置は当日配布のパンフレットまたは校内に設置の掲示物等でご確認ください。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qa-box" id="3">
+                        <div class="qa-title">
+                            <h3>
+                                <div>Q.</div>
+                                <div>女子トイレはありますか？</div>
+                            </h3>
+                        </div>
+                        <div class="qa-answer">
+                            <h3 class="answer-large">A.</h3>
+                            <div class="answer-content-wrap">
+                                <p class="answer-check hide">はい。一部フロアの男子トイレの個室も、女子トイレとして利用できます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--qa-boxの追加をする場合は必ず前のqa-boxに1を足したidを振ってください-->
+                </div>
+            </div>
+        </section>
+        <section id="form">
+            <div class="wrapper">
+                <div class="form-link-con">
+                    <div class="form-link-info">
+                        <h2><a href="faq.html">お問い合わせフォーム</a></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ここまで編集 -->
+    <footer>
+        <div class="wrapper">
+            <div class="footer-con">
+                <div class="footer-info">
+                    <div class="footer-media">
+                        <div class="tokai-info">
+                            <h2>東海中学校・高等学校</h2>
+                            <p>愛知県名古屋市東区筒井一丁目2-35</p>
+                            <a href="faq.html">お問い合わせフォーム</a>
+                        </div>
+                        <div class="trip-to-tokai">
+                            <p>#TripToTokai</p>
+                        </div>
+                    </div>
+                    <div class="follow-us">
+                        <h2>Follow Us</h2>
+                        <div class="sns">
+                            <a href="https://x.com/kinensai">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tokaikinensai/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/components/header.js"></script>
+</body>
+
+</html>

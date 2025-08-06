@@ -1,0 +1,145 @@
+/* ここから編集 */
+main {
+  padding: 72px 0 36px;
+  flex-grow: 1;
+  font-family: var(--fontIII);
+}
+
+.spacer {
+  display: block;
+  height: 26px;
+}
+
+#top {
+  min-height: 100px;
+}
+
+.top-con {
+  text-align: center;
+  margin: 15px 0 30px;
+}
+
+.top-info h1 {
+  font-size: var(--ltFont);
+}
+
+.project-con {
+  display: flex;
+  gap: 20px;
+  margin: 50px 5%;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.class-con {
+  background-color: rgba(188, 36, 36, 0.2);
+}
+
+.stage-con {
+  background-color: rgba(36, 188, 36, 0.2);
+}
+
+.kodo-con {
+  background-color: rgba(36, 36, 188, 0.2);
+}
+
+.store-con {
+  background-color: rgba(188, 188, 36, 0.2);
+}
+
+.info {
+  margin: 0 20px;
+}
+
+.info h2 {
+  margin: 5px 0;
+  font-size: var(--stFont);
+}
+
+.info p {
+  margin: 0 10px;
+  font-size: var(--mbFont);
+}
+
+.add {
+  cursor: pointer;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.toggle p,
+.toggle i {
+  margin: 10px 5px;
+  font-size: var(--sbFont);
+  color: var(--colorII);
+}
+
+.toggle i {
+  padding: auto;
+}
+
+.kodo-more,.class-more {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.kodo-more.show-animation,
+.class-more.show-animation {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.kodo-more p,
+.class-more p {
+  font-size: var(--sbFont);
+}
+
+.hide-animation {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle.hide {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.toggle:not(.hide) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#class-project,
+#stage-project,
+#kodo-project,
+#mock-store {
+  min-height: 200px;
+}
+
+.picture {
+  width: 360px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+.item figure img {
+  margin: 0 auto;
+  padding: 0 1px;
+  width: 360px !important;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+  overflow: hidden;
+}

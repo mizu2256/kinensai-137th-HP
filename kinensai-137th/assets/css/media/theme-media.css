@@ -1,0 +1,44 @@
+@media (max-width: 960px) {
+  .theme-info p {
+    font-size: var(--mbFont);
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-con {
+    max-width: 484px;
+    width: 90%;
+  }
+
+  .theme-info h1 {
+    font-size: var(--mtFont);
+  }
+}
+
+@media (max-width: 512px) {
+  .theme-info {
+    padding: 30px;
+  }
+
+  .theme-info h1 {
+    font-size: var(--stFont);
+  }
+}
+
+@media (max-width: 868px) {
+  .bon_voyage {
+    background-size: 360px;
+  }
+}
+
+@media (max-width: 565px) {
+  .bon_voyage {
+    background-size: 270px;
+  }
+}
+
+@media (max-width: 405px) {
+  .bon_voyage {
+    background-size: 200px;
+  }
+}

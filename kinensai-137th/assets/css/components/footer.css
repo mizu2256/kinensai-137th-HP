@@ -1,23 +1,13 @@
 /* ファイル全体改変禁止 */
-/* 環境変数 */
-:root {
-  /* 文字の大きさ・文章 */
-  --SbFont: 16px;
-  --MbFont: 19px;
-  --LbFont: 22px;
-
-  /* 文字の大きさ・タイトル */
-  --XStFont: 24px;
-  --StFont: 30px;
-  --MtFont: 36px;
-  --LtFont: 42px;
-  --XLtFont: 48px;
+/* フッターの設定 */
+footer {
+  border-top: 2px solid var(--colorII);
+  background-color: rgb(204, 204, 204);
+  position: relative;
 }
 
-
-footer {
-  min-height: 315px;
-  background-color: rgba(0, 0, 0, 0.2);
+.footer-con {
+  padding: 8px 0 10px;
 }
 
 .footer-info {
@@ -25,33 +15,95 @@ footer {
   justify-content: space-between;
 }
 
-.footer-con {
-  padding: 20px;
+.tokai-info {
+  margin: auto 0;
 }
 
-.site-map h2 {
-  margin-bottom: 16px;
-  font-size: var(--LtFont);
+.tokai-info h2 {
+  font-size: var(--stFont);
 }
 
-.site-map ul li a {
-  display: block;
-  color: black;
-  padding-bottom: 16px;
-  font-size: var(--MbFont);
+.tokai-info p {
+  font-size: var(--mbFont);
+}
+
+.tokai-info a {
+  font-size: var(--sbFont);
+  color: var(--colorII);
+}
+
+.trip-to-tokai {
+  margin: auto 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.trip-to-tokai p {
+  opacity: 0.6;
+  font-size: var(--stFont);
+  color: var(--colorII);
 }
 
 .follow-us h2 {
-  font-size: var(--LtFont);
+  font-size: var(--stFont);
 }
 
 .sns {
+  text-align: center;
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  gap: 20px;
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 144px;
 }
 
 .sns a i {
-  font-size: 64px;
+  font-size: var(--ltFont);
   color: black;
+}
+
+/* media */
+@media (max-width: 960px) {
+  .footer-con {
+    padding: 15px 0 20px;
+  }
+
+  .footer-info {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .trip-to-tokai {
+    position: static;
+    transform: translate(0%,0%);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-media {
+    display: block;
+  }
+
+  .trip-to-tokai {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .tokai-info h2 {
+    font-size: var(--xstFont);
+  }
+
+  .tokai-info p {
+    font-size: var(--sbFont);
+  }
 }
