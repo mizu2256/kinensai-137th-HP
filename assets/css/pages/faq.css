@@ -57,6 +57,10 @@ input {
   width: 200px;
 }
 
+.return > a > div:first-child {
+  transform: translateY(2px) rotate(180deg);
+}
+
 .return>a:hover {
   background-color: rgb(64, 64, 255);
 }
