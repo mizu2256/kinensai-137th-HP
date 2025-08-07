@@ -45,7 +45,7 @@
                     $(".submitting").css('display', 'none');
                     $(".thanks").css('display', 'block');
                     $(".return").css('display', 'block');
-                    $(".main").css('flex-direction','column');
+                    $(".main").css('flex-direction', 'column');
                     console.log(content);
                 });
             });
@@ -65,7 +65,7 @@
                 var spl = val.split('\n');
                 var n = spl.length;
                 var u = n;
-                for (let i = 0; i < n; i++){
+                for (let i = 0; i < n; i++) {
                     console.log(spl[i].split('').length);
                     u += Math.ceil(spl[i].split('').length * 16 / cwidth);
                 }
@@ -84,13 +84,23 @@
             function checkaddress(address) {
                 var b = true;
                 var string = [];
-                if (!address.split("").includes("@")) {string.push("メールアドレスに@が含まれていません。");b = false;}
-                else if (!address.split("@")[1].includes(".")) {string.push("@の後には～.comや～.jpなどが入ります。");b=false;}
-                if (address.split("@")[0] == "") {string.push("@の前に何も書かれていません。");b=false;}
+                if (!address.split("").includes("@")) { string.push("メールアドレスに@が含まれていません。"); b = false; }
+                else if (!address.split("@")[1].includes(".")) { string.push("@の後には～.comや～.jpなどが入ります。"); b = false; }
+                if (address.split("@")[0] == "") { string.push("@の前に何も書かれていません。"); b = false; }
                 if (!b) alert(string.join("\n"));
                 return b;
             }
         });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HDWLDJ661"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4HDWLDJ661');
     </script>
 </head>
 
@@ -140,7 +150,10 @@
                 <div class="box">
                     <div class="explanation">
                         <div>メールアドレス</div>
-                        <div><div>例: </div><div>example@tokai-jh.ed.jp</div></div>
+                        <div>
+                            <div>例: </div>
+                            <div>example@tokai-jh.ed.jp</div>
+                        </div>
                     </div>
                     <div class="answer">
                         <div class="question" id="q1">メールアドレス</div>
@@ -150,21 +163,31 @@
                 <div class="box">
                     <div class="explanation">
                         <div>お問い合わせ内容</div>
-                        <div><div>例: </div><div>学校の敷地内に入るために予約は必要ですか？</div></div>
+                        <div>
+                            <div>例: </div>
+                            <div>学校の敷地内に入るために予約は必要ですか？</div>
+                        </div>
                         <div>質問は複数あっても構いません。</div>
                     </div>
                     <div class="answer">
                         <textarea class="content" id="content" rows="3" placeholder="✎"></textarea>
                     </div>
                 </div>
-                <div class="subsubmit"><button id="submit"><div>　</div><div>送信</div><div>➔</div></button></div>
+                <div class="subsubmit"><button id="submit">
+                        <div>　</div>
+                        <div>送信</div>
+                        <div>➔</div>
+                    </button></div>
             </div>
             <div class="submitting">送信中です。<br>しばらくお待ちください。</div>
             <div class="thanks">
                 ありがとうございました。<br>お問い合わせ内容への回答は数日以内にメールをお送りいたします。
             </div>
             <div class="return">
-                <a href="index.html"><div>➔</div><div>ホームに戻る</div></a>
+                <a href="index.html">
+                    <div>➔</div>
+                    <div>ホームに戻る</div>
+                </a>
             </div>
         </div>
     </main>
