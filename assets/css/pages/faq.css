@@ -66,8 +66,8 @@ input {
 }
 
 .main {
-  display: none;
-  /* display: flex; */
+  /* display: none; */
+  display: flex;
   justify-content: center;
 }
 
@@ -219,6 +219,7 @@ button#submit:hover {
 }
 
 .wait {
+  display: none;
   text-align: center;
   font-size: var(--mbFont);
 }
