@@ -31,7 +31,7 @@
             var opened = false;
             $(document).on('click', '#submit', function () {
                 var content = $('#content').val();
-                if (!confirm(`送信しますか？`)) return;
+                if (removespace(content)=="") {alert("お問い合わせ内容を入力してください。");return;} else if (!confirm(`送信しますか？`)) return;
                 $(".form").css('display', 'none');
                 $(".submitting").css('display', 'block');
                 $(".submitting").css('display', 'none');
@@ -76,6 +76,12 @@
                 else
                     $('.content').attr('rows', 3);
             });
+
+            function removespace(str) {
+                var str = str.split(" ").join("");
+                var str2 = str.split("　").join("");
+                return str2;
+            }
         });
     </script>
 
