@@ -35,6 +35,13 @@ input {
   display: none;
 }
 
+.fail {
+  text-align: center;
+  cursor: pointer;
+  font-size: var(--mbFont);
+  color: blue;
+}
+
 .return {
   font-size: var(--mbFont);
   display: none;
