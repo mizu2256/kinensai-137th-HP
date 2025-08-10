@@ -21,3 +21,18 @@
         width: 50%;
     }
 }
+
+
+@media (max-width: 601px) {
+    .thanks {
+        font-size: var(--sbFont);
+    }
+    
+    .rev {
+        font-size: var(--sbFont);
+    }
+
+    .rev-con {
+        font-size: var(--sbFont);
+    }
+}

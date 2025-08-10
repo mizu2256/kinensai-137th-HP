@@ -28,6 +28,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(function () {
+            var opened = false;
             $(document).on('click', '#submit', function () {
                 var content = $('#content').val();
                 if (!confirm(`送信しますか？`)) return;
@@ -37,16 +38,24 @@
                 $(".thanks").css('display', 'block');
                 $(".return").css('display', 'flex');
                 $(".main").css('flex-direction', 'column');
+                $(".rev-con").text(content);
+                $(".review").css('display', 'inline-block');
 
                 const subject = '137周年記念祭についてのお問い合わせ';
-                const body = `お問い合わせ内容\n${content}\n\nメールアドレスは、お問い合わせをいただいた対応のためのみに使用させていただきます。`;
+                const body = `お問い合わせ内容\n${content}\n\nメールアドレスは、お問い合わせをいただいた方への対応以外の目的では使用しません。`;
 
                 const mailtoLink = `mailto:kinensai137th.soumu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
                 window.location.href = mailtoLink;
             });
-            $(document).on('click', '.fail', function () {
-
+            $(document).on('click', '.rev', function () {
+                if (!opened) {
+                    $('.rev-con').removeClass('hidden');
+                    opened = true;
+                } else {
+                    $('.rev-con').addClass('hidden');
+                    opened = false;
+                }
             });
             $('.content').on('input', function (e) {
                 var val = $('.content').val();
@@ -154,6 +163,12 @@
                 <div class="submitting">処理中です。<br>しばらくお待ちください。</div>
                 <div class="thanks">
                     この先は各メールアプリの指示に従って送信してください。<br>ありがとうございました。
+                </div>
+                <div class="rev-wrapper">
+                    <div class="review">
+                        <div class="rev">もう一度送信内容を見る</div>
+                        <div class="rev-con hidden"></div>
+                    </div>
                 </div>
                 <div class="return">
                     <a href="index.html">

@@ -35,11 +35,29 @@ input {
   display: none;
 }
 
-.fail {
+.rev-wrapper {
+  margin: 20px 0 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.review {
+  display: none;
+}
+
+.rev {
   text-align: center;
-  cursor: pointer;
   font-size: var(--mbFont);
-  color: blue;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rev-con {
+  display: inline-block;
+  word-break: break-all;
+  border-left: 2px solid gray;
+  padding: 0 12px 0 10px;
+  margin: 10px 10px 0 10px;
 }
 
 .return {
@@ -179,4 +197,8 @@ button#submit:hover {
 
 .mail-info p {
   font-size: var(--sbFont);
+}
+
+.hidden {
+  display: none;
 }
