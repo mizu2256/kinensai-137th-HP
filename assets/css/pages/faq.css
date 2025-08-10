@@ -46,6 +46,7 @@ input {
 }
 
 .rev {
+  width: 230px;
   text-align: center;
   font-size: var(--mbFont);
   cursor: pointer;
