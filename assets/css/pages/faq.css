@@ -15,7 +15,7 @@ input {
   outline: none;
 }
 
-.answer>textarea {
+.answer > textarea {
   width: 100%;
   line-height: 20px;
   padding: 5px;
@@ -36,12 +36,12 @@ input {
 }
 
 .rev-wrapper {
-  margin: 20px 0 50px 0;
   display: flex;
   justify-content: center;
 }
 
 .review {
+  margin: 20px 0 40px 0;
   display: none;
 }
 
@@ -74,7 +74,7 @@ input {
   margin-top: 10px;
 }
 
-.return>a {
+.return > a {
   display: flex;
   justify-content: space-around;
   font-weight: bold;
@@ -89,11 +89,11 @@ input {
   width: 200px;
 }
 
-.return>a>div:first-child {
+.return > a > div:first-child {
   transform: translateY(2px) rotate(180deg);
 }
 
-.return>a:hover {
+.return > a:hover {
   background-color: rgb(64, 64, 255);
 }
 
@@ -109,7 +109,7 @@ input {
 
 .top-con {
   text-align: center;
-  margin: 15px 0 30px;
+  margin: 15px 0;
 }
 
 .top-info h1 {
@@ -127,16 +127,16 @@ input {
   align-items: stretch;
 }
 
-.box>.explanation {
+.box > .explanation {
   color: gray;
 }
 
-.explanation>div:first-child {
+.explanation > div:first-child {
   font-size: var(--mbFont);
   color: black;
 }
 
-.explanation>div:nth-child(2) {
+.explanation > div:nth-child(2) {
   display: flex;
 }
 
@@ -158,12 +158,12 @@ input {
   border-bottom: 1px solid green;
 }
 
-.form>div {
+.form > div {
   margin: 10px;
 }
 
-.form>div:nth-child(2) {
-  padding-bottom: 10px;
+.form > div:nth-child(2) {
+  padding: 10px 0 10px;
 }
 
 .subsubmit {
@@ -197,7 +197,7 @@ button#submit:hover {
 }
 
 .mail-info {
-  padding: 30px;
+  padding: 20px 0 0;
   text-align: center;
 }
 
