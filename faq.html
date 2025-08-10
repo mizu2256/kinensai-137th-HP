@@ -51,11 +51,13 @@
             $(document).on('click', '.rev', function () {
                 if (!opened) {
                     $('.rev-con').removeClass('hidden');
-                    $('.rev').text("▼とじる");
+                    $('.rev-text').text("とじる");
+                    $('.triangle').text("▼");
                     opened = true;
                 } else {
                     $('.rev-con').addClass('hidden');
-                    $('.rev').text("▶︎もう一度送信内容を見る");
+                    $('.rev-text').text("もう一度送信内容を見る");
+                    $('.triangle').text("▶");
                     opened = false;
                 }
             });
@@ -168,7 +170,10 @@
                 </div>
                 <div class="rev-wrapper">
                     <div class="review">
-                        <div class="rev">▶︎もう一度送信内容を見る</div>
+                        <div class="rev">
+                            <div class="triangle">▶︎</div>
+                            <div class="rev-text">もう一度送信内容を見る</div>
+                        </div>
                         <div class="rev-con hidden"></div>
                     </div>
                 </div>

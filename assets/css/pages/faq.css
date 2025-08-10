@@ -46,11 +46,16 @@ input {
 }
 
 .rev {
-  width: 230px;
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: var(--mbFont);
   cursor: pointer;
   user-select: none;
+}
+
+.rev > div:last-child {
+  width: 230px;
 }
 
 .rev-con {
