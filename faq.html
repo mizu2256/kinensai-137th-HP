@@ -47,6 +47,13 @@
                     $(".return").css('display', 'block');
                     $(".main").css('flex-direction', 'column');
                     console.log(content);
+
+                    const subject = '137周年記念祭についてのお問い合わせ';
+                    const body = `メールアドレス: ${address}\n\nお問い合わせ内容\n${content}\n\nメールアドレスは、お問い合わせをいただいた対応のためのみに使用させていただきます。`;
+
+                    const mailtoLink = `mailto:kinensai137th.soumu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                    window.location.href = mailtoLink;
                 });
             });
             $('.address').focus(function () {
@@ -150,48 +157,57 @@
             <p>しばらくお待ちください。</p>
         </div>
         <div class="main">
-            <div class="form">
-                <div class="box">
-                    <div class="explanation">
-                        <div>メールアドレス</div>
-                        <div>
-                            <div>例: </div>
-                            <div>example@tokai-jh.ed.jp</div>
+            <div class="wrapper">
+                <div class="form">
+                    <div class="box">
+                        <div class="explanation">
+                            <div>メールアドレス</div>
+                            <div>
+                                <div>例: </div>
+                                <div>example@tokai-jh.ed.jp</div>
+                            </div>
+                        </div>
+                        <div class="answer">
+                            <div class="question" id="q1">メールアドレス</div>
+                            <input class="address" id="address" />
                         </div>
                     </div>
-                    <div class="answer">
-                        <div class="question" id="q1">メールアドレス</div>
-                        <input class="address" id="address" />
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="explanation">
-                        <div>お問い合わせ内容</div>
-                        <div>
-                            <div>例: </div>
-                            <div>学校の敷地内に入るために予約は必要ですか？</div>
+                    <div class="box">
+                        <div class="explanation">
+                            <div>お問い合わせ内容</div>
+                            <div>
+                                <div>例: </div>
+                                <div>学校の敷地内に入るために予約は必要ですか？</div>
+                            </div>
+                            <div>質問は複数あっても構いません。</div>
                         </div>
-                        <div>質問は複数あっても構いません。</div>
+                        <div class="answer">
+                            <textarea class="content" id="content" rows="3" placeholder="✎"></textarea>
+                        </div>
                     </div>
-                    <div class="answer">
-                        <textarea class="content" id="content" rows="3" placeholder="✎"></textarea>
+                    <div class="subsubmit">
+                        <button id="submit">
+                            <div>　</div>
+                            <div>送信</div>
+                            <div>➔</div>
+                        </button>
+                    </div>
+                    <div class="mail-info">
+                        <p>送信ボタンクリック後、メールが起動します。</p>
+                        <p>画像を添付される場合は、送信メールに直接添付してください。</p>
                     </div>
                 </div>
-                <div class="subsubmit"><button id="submit">
-                        <div>　</div>
-                        <div>送信</div>
+
+                <div class="submitting">処理中です。<br>しばらくお待ちください。</div>
+                <div class="thanks">
+                    この先は各メールアプリの指示に従って送信してください。<br>ありがとうございました。
+                </div>
+                <div class="return">
+                    <a href="index.html">
                         <div>➔</div>
-                    </button></div>
-            </div>
-            <div class="submitting">送信中です。<br>しばらくお待ちください。</div>
-            <div class="thanks">
-                ありがとうございました。<br>お問い合わせ内容への回答は数日以内にメールをお送りいたします。
-            </div>
-            <div class="return">
-                <a href="index.html">
-                    <div>➔</div>
-                    <div>ホームに戻る</div>
-                </a>
+                        <div>ホームに戻る</div>
+                    </a>
+                </div>
             </div>
         </div>
     </main>

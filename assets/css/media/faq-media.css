@@ -1,4 +1,4 @@
-@media (max-width: 512px) {
+@media (max-width: 960px) {
     :root {
         --y: 7px;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 513px) {
+@media (min-width: 961px) {
     .box > .explanation {
         width: 50%;
     }
