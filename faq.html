@@ -29,42 +29,21 @@
     <script>
         $(function () {
             $(document).on('click', '#submit', function () {
-                var address = $('#address').val();
                 var content = $('#content').val();
-                address = removespace(address);
-                if (!address || !content) { alert("アドレスか質問内容に文字列が入力されていません"); return; } else
-                    if (!checkaddress(address)) return; else if (!confirm(`入力内容に間違いはありませんか？\n メールアドレス: ${address}`)) return;
-                console.log("clicked");
                 $(".form").css('display', 'none');
                 $(".submitting").css('display', 'block');
-                new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                        resolve("foo");
-                    }, 1000);
-                }).then((val) => {
-                    $(".submitting").css('display', 'none');
-                    $(".thanks").css('display', 'block');
-                    $(".return").css('display', 'block');
-                    $(".main").css('flex-direction', 'column');
-                    console.log(content);
+                $(".submitting").css('display', 'none');
+                $(".thanks").css('display', 'block');
+                $(".return").css('display', 'flex');
+                $(".main").css('flex-direction', 'column');
 
-                    const subject = '137周年記念祭についてのお問い合わせ';
-                    const body = `メールアドレス: ${address}\n\nお問い合わせ内容\n${content}\n\nメールアドレスは、お問い合わせをいただいた対応のためのみに使用させていただきます。`;
+                const subject = '137周年記念祭についてのお問い合わせ';
+                const body = `メールアドレス: ${address}\n\nお問い合わせ内容\n${content}\n\nメールアドレスは、お問い合わせをいただいた対応のためのみに使用させていただきます。`;
 
-                    const mailtoLink = `mailto:kinensai137th.soumu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const mailtoLink = `mailto:kinensai137th.soumu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-                    window.location.href = mailtoLink;
-                });
-            });
-            $('.address').focus(function () {
-                if (!$(this).parent().children(".question").eq(0).hasClass(".kotei"))
-                    $(this).parent().children(".question").eq(0).css('animation', 'linear 0.075s shuunou').addClass("shuunou");
-                $(this).parent().children(".question").eq(0).removeClass("kotei");
-            });
-            $('.address').blur(function () {
-                if ($(this).val() == "")
-                    $(this).parent().children(".question").eq(0).css('animation', 'linear 0.075s kakudai').removeClass("shuunou");
-                else $(this).parent().children(".question").eq(0).addClass("kotei");
+                //open(mailtoLink);
+                window.location.href = mailtoLink;
             });
             $('.content').on('input', function (e) {
                 var val = $('.content').val();
@@ -81,22 +60,6 @@
                 else
                     $('.content').attr('rows', 3);
             });
-
-            function removespace(address) {
-                var str = address.split(" ").join("");
-                var str2 = str.split("　").join("");
-                return str2;
-            }
-
-            function checkaddress(address) {
-                var b = true;
-                var string = [];
-                if (!address.split("").includes("@")) { string.push("メールアドレスに@が含まれていません。"); b = false; }
-                else if (!address.split("@")[1].includes(".")) { string.push("@の後には～.comや～.jpなどが入ります。"); b = false; }
-                if (address.split("@")[0] == "") { string.push("@の前に何も書かれていません。"); b = false; }
-                if (!b) alert(string.join("\n"));
-                return b;
-            }
         });
     </script>
 
@@ -159,19 +122,6 @@
         <div class="main">
             <div class="wrapper">
                 <div class="form">
-                    <div class="box">
-                        <div class="explanation">
-                            <div>メールアドレス</div>
-                            <div>
-                                <div>例: </div>
-                                <div>example@tokai-jh.ed.jp</div>
-                            </div>
-                        </div>
-                        <div class="answer">
-                            <div class="question" id="q1">メールアドレス</div>
-                            <input class="address" id="address" />
-                        </div>
-                    </div>
                     <div class="box">
                         <div class="explanation">
                             <div>お問い合わせ内容</div>

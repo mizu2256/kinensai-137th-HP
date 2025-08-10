@@ -38,6 +38,7 @@ input {
 .return {
   font-size: var(--mbFont);
   display: none;
+  justify-content: center;
   margin: auto;
   margin-top: 10px;
 }
@@ -57,7 +58,7 @@ input {
   width: 200px;
 }
 
-.return > a > div:first-child {
+.return>a>div:first-child {
   transform: translateY(2px) rotate(180deg);
 }
 
@@ -114,39 +115,6 @@ input {
   justify-content: flex-start;
 }
 
-.address {
-  font-size: var(--sbFont);
-  padding: 10px;
-  width: 100%;
-  border: 1px solid gray;
-  border-radius: 4px;
-}
-
-.address:focus {
-  border: 1px solid green;
-}
-
-.question {
-  color: gray;
-  pointer-events: none;
-  translate: 0;
-  position: absolute;
-  transform: translateY(var(--y));
-  margin-left: 6px;
-  padding: 0 4px;
-  background-color: white;
-}
-
-.question.shuunou {
-  font-size: 13px;
-  transform: translateY(-9px);
-  color: green;
-}
-
-.question.kotei {
-  color: black;
-}
-
 .content {
   font-size: var(--sbFont);
   border: none;
@@ -189,34 +157,6 @@ button#submit {
 
 button#submit:hover {
   background-color: rgb(64, 64, 255);
-}
-
-@keyframes shuunou {
-  0% {
-    transform: translateY(var(--y));
-    font-size: var(--sbFont);
-    color: black;
-  }
-
-  100% {
-    transform: translateY(-9px);
-    font-size: 13px;
-    color: green;
-  }
-}
-
-@keyframes kakudai {
-  0% {
-    transform: translateY(-9px);
-    font-size: 13px;
-    color: green;
-  }
-
-  100% {
-    transform: translateY(var(--y));
-    font-size: var(--sbFont);
-    color: black;
-  }
 }
 
 .wait {
