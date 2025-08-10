@@ -15,9 +15,9 @@ input {
   outline: none;
 }
 
-.answer>textarea {
+.answer > textarea {
   width: 100%;
-  line-height: 16px;
+  line-height: 22px;
   padding: 5px;
 }
 
@@ -35,14 +35,46 @@ input {
   display: none;
 }
 
+.rev-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.review {
+  margin: 20px 0 40px 0;
+  display: none;
+}
+
+.rev {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--mbFont);
+  cursor: pointer;
+  user-select: none;
+}
+
+.rev > div:last-child {
+  width: 230px;
+}
+
+.rev-con {
+  display: inline-block;
+  word-break: break-all;
+  border-left: 2px solid gray;
+  padding: 0 12px 0 10px;
+  margin: 10px 10px 0 10px;
+}
+
 .return {
   font-size: var(--mbFont);
   display: none;
+  justify-content: center;
   margin: auto;
   margin-top: 10px;
 }
 
-.return>a {
+.return > a {
   display: flex;
   justify-content: space-around;
   font-weight: bold;
@@ -61,13 +93,13 @@ input {
   transform: translateY(2px) rotate(180deg);
 }
 
-.return>a:hover {
+.return > a:hover {
   background-color: rgb(64, 64, 255);
 }
 
 .main {
-  display: none;
-  /* display: flex; */
+  /* display: none; */
+  display: flex;
   justify-content: center;
 }
 
@@ -77,6 +109,7 @@ input {
 
 .top-con {
   text-align: center;
+  margin: 15px 0;
 }
 
 .top-info h1 {
@@ -85,7 +118,7 @@ input {
 
 .form {
   margin: 8px;
-  width: 90vw;
+  width: 100%;
 }
 
 .box {
@@ -94,16 +127,16 @@ input {
   align-items: stretch;
 }
 
-.box>.explanation {
+.box > .explanation {
   color: gray;
 }
 
-.explanation>div:first-child {
+.explanation > div:first-child {
   font-size: var(--mbFont);
   color: black;
 }
 
-.explanation>div:nth-child(2) {
+.explanation > div:nth-child(2) {
   display: flex;
 }
 
@@ -111,39 +144,6 @@ input {
   width: 50%;
   display: flex;
   justify-content: flex-start;
-}
-
-.address {
-  font-size: var(--sbFont);
-  padding: 10px;
-  width: 100%;
-  border: 1px solid gray;
-  border-radius: 4px;
-}
-
-.address:focus {
-  border: 1px solid green;
-}
-
-.question {
-  color: gray;
-  pointer-events: none;
-  translate: 0;
-  position: absolute;
-  transform: translateY(var(--y));
-  margin-left: 6px;
-  padding: 0 4px;
-  background-color: white;
-}
-
-.question.shuunou {
-  font-size: 13px;
-  transform: translateY(-9px);
-  color: green;
-}
-
-.question.kotei {
-  color: black;
 }
 
 .content {
@@ -158,12 +158,12 @@ input {
   border-bottom: 1px solid green;
 }
 
-.form>div {
+.form > div {
   margin: 10px;
 }
 
-.form>div:nth-child(2) {
-  padding-bottom: 10px;
+.form > div:nth-child(2) {
+  padding: 10px 0 10px;
 }
 
 .subsubmit {
@@ -190,35 +190,21 @@ button#submit:hover {
   background-color: rgb(64, 64, 255);
 }
 
-@keyframes shuunou {
-  0% {
-    transform: translateY(var(--y));
-    font-size: var(--sbFont);
-    color: black;
-  }
-
-  100% {
-    transform: translateY(-9px);
-    font-size: 13px;
-    color: green;
-  }
-}
-
-@keyframes kakudai {
-  0% {
-    transform: translateY(-9px);
-    font-size: 13px;
-    color: green;
-  }
-
-  100% {
-    transform: translateY(var(--y));
-    font-size: var(--sbFont);
-    color: black;
-  }
-}
-
 .wait {
+  display: none;
   text-align: center;
   font-size: var(--mbFont);
+}
+
+.mail-info {
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.mail-info p {
+  font-size: var(--sbFont);
+}
+
+.hidden {
+  display: none;
 }
