@@ -39,11 +39,10 @@
                 $(".main").css('flex-direction', 'column');
 
                 const subject = '137周年記念祭についてのお問い合わせ';
-                const body = `メールアドレス: ${address}\n\nお問い合わせ内容\n${content}\n\nメールアドレスは、お問い合わせをいただいた対応のためのみに使用させていただきます。`;
+                const body = `お問い合わせ内容\n${content}\n\nメールアドレスは、お問い合わせをいただいた対応のためのみに使用させていただきます。`;
 
                 const mailtoLink = `mailto:kinensai137th.soumu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-                //open(mailtoLink);
                 window.location.href = mailtoLink;
             });
             $(document).on('click', '.fail', function () {
@@ -156,38 +155,12 @@
                 <div class="thanks">
                     この先は各メールアプリの指示に従って送信してください。<br>ありがとうございました。
                 </div>
-                <!--<div class="fail">送信できないときはここをクリックしてください。</div>-->
                 <div class="return">
                     <a href="index.html">
                         <div>➔</div>
                         <div>ホームに戻る</div>
                     </a>
                 </div>
-                <!--
-                <div class="form-fail">
-                    <div class="ff-box">
-                        <div class="capt">考えられる要因その1: インターネットに接続されていない</div>
-                        <div class="con">
-                            スマートフォンをお使いの方は、画面右上にWi-Fiマークまたは～Gと表示されているかを確認してください。<br>
-                            パソコンをお使いの方は、画面右下にWi-Fiマークが表示されているかを確認してください。<br>
-                            表示されていない場合、その端末はインターネットに接続されていないため、設定からWi-Fiに接続してください。
-                        </div>
-                    </div>
-                    <div class="ff-box">
-                        <div class="capt">考えられる要因その2: 起動するメールアプリが使えない</div>
-                        <div class="con">
-                            起動するメールアプリにログインできていない場合はログインを求められます。<br>
-                            そのため、そのメールアプリのアカウントを持っていない場合は別のメールアプリから送信する必要があります。
-                        </div>
-                        <div class="app-list">
-                            <div class="app-con"></div>
-                        </div>
-                        <div class="con">
-                            LINEでの送信はできませんので、ご了承ください。
-                        </div>
-                    </div>
-                </div>
-                -->
             </div>
         </div>
     </main>
