@@ -1,38 +1,37 @@
 @media (max-width: 960px) {
-    :root {
-        --y: 7px;
-    }
+  :root {
+    --y: 7px;
+  }
 
-    .box {
-        flex-direction: column;
-    }
+  .box {
+    flex-direction: column;
+  }
 
-    .box > div {
-        width: 100%;
-    }
+  .box > div {
+    width: 100%;
+  }
 
-    .box > .explanation {
-        margin-bottom: 8px;
-    }
+  .box > .explanation {
+    margin-bottom: 8px;
+  }
 }
 
 @media (min-width: 961px) {
-    .box > .explanation {
-        width: 50%;
-    }
+  .box > .explanation {
+    width: 50%;
+  }
 }
 
-
 @media (max-width: 601px) {
-    .thanks {
-        font-size: var(--sbFont);
-    }
-    
-    .rev {
-        font-size: var(--sbFont);
-    }
+  .thanks {
+    font-size: var(--sbFont);
+  }
 
-    .rev-con {
-        font-size: var(--sbFont);
-    }
+  .rev {
+    font-size: var(--sbFont);
+  }
+
+  .rev-con {
+    font-size: var(--sbFont);
+  }
 }

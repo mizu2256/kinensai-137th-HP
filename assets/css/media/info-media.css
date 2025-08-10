@@ -89,6 +89,10 @@
   .qa-answer p {
     font-size: 13px;
   }
+
+  .analytics-info {
+    text-align: center;
+  }
 }
 
 @media (max-width: 512px) {

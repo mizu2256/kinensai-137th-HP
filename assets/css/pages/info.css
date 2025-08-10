@@ -91,3 +91,8 @@ main {
 .hidden {
   display: none;
 }
+
+.analytics-info {
+  text-align: right;
+  padding-top: 30px;
+}
