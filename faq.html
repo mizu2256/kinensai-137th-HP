@@ -32,13 +32,14 @@
             $(document).on('click', '#submit', function () {
                 var content = $('#content').val();
                 if (removespace(content) == "") { alert("お問い合わせ内容を入力してください。"); return; } else if (!confirm(`送信しますか？`)) return;
+                var str = content.split("\n").join("<br>");
                 $(".form").css('display', 'none');
                 $(".submitting").css('display', 'block');
                 $(".submitting").css('display', 'none');
                 $(".thanks").css('display', 'block');
                 $(".return").css('display', 'flex');
                 $(".main").css('flex-direction', 'column');
-                $(".rev-con").text(content);
+                $(".rev-con").html(str);
                 $(".review").css('display', 'inline-block');
 
                 const subject = '137周年記念祭についてのお問い合わせ';
