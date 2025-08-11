@@ -87,6 +87,15 @@ main {
   flex-direction: column;
 }
 
+.analytics-info {
+  text-align: right;
+  padding-top: 30px;
+}
+
+.analytics-info p {
+  font-size: var(--sbFont);
+}
+
 /*これは必ず最後に置く*/
 .hidden {
   display: none;
