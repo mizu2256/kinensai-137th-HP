@@ -80,6 +80,10 @@
   .wh-kinen-box {
     margin: 0;
   }
+
+  .toho {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 450px) {
