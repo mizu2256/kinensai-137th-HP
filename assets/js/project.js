@@ -8,6 +8,11 @@ const classMore = document.querySelector(".class-more");
 const openClass = document.querySelector(".open-class");
 const closeClass = document.querySelector(".close-class");
 
+// 模擬店
+const shopMore = document.querySelector(".shop-more");
+const openShop = document.querySelector(".open-shop");
+const closeShop = document.querySelector(".close-shop");
+
 // ステージ企画
 const stageMore = document.querySelector(".stage-more");
 const openStage = document.querySelector(".open-stage");
@@ -59,4 +64,5 @@ function setupToggle(openButton, closeButton, content) {
 
 setupToggle(openKodo, closeKodo, kodoMore);
 setupToggle(openClass, closeClass, classMore);
+setupToggle(openShop, closeShop, shopMore);
 setupToggle(openStage, closeStage, stageMore);
