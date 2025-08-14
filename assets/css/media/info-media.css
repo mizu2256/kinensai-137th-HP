@@ -91,7 +91,7 @@
   }
 
   .qa-answer p {
-    font-size: 13px;
+    font-size: var(--sbFont);
   }
 
   .analytics-info {
