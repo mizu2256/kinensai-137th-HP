@@ -84,7 +84,9 @@ main {
   padding: auto;
 }
 
-.kodo-more,.class-more {
+.kodo-more,
+.class-more,
+.shop-more {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -92,13 +94,15 @@ main {
 }
 
 .kodo-more.show-animation,
-.class-more.show-animation {
+.class-more.show-animation,
+.shop-more.show-animation {
   max-height: 2000px;
   opacity: 1;
 }
 
 .kodo-more p,
-.class-more p {
+.class-more p,
+.shop-more p {
   font-size: var(--sbFont);
 }
 
