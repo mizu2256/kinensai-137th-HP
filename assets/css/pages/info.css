@@ -96,6 +96,14 @@ main {
   font-size: var(--sbFont);
 }
 
+.updates-date {
+  text-align: right;
+}
+
+.updates-date p {
+  font-size: var(--sbFont);
+}
+
 /*これは必ず最後に置く*/
 .hidden {
   display: none;

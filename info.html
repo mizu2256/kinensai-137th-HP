@@ -27,27 +27,34 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(function () {
-            var isshwing = [];
-            var height = [];
-            var i = 0;
-            var bool = true;
-            while (bool) {
-                var h = $('#' + i).children('.qa-answer').eq(0).height();
-                if (h == undefined) bool = false; else height[i] = h;
-                i++;
-            }
-            console.log(height);
+            // isshwingとheightをオブジェクトで管理
+            var isshwing = {};
+            var height = {};
+
+            // すべての .qa-box をループ処理
+            $('.qa-box').each(function () {
+                var id = $(this).attr('id');
+                if (id) {
+                    height[id] = $(this).children('.qa-answer').eq(0).height();
+                    isshwing[id] = false; // 初期状態を非表示に設定
+                }
+            });
+
             $('.qa-answer').addClass('hidden');
+
             $(document).on('click', '.qa-title', function () {
-                const id = parseInt($(this).parent().attr('id'));
+                const $parent = $(this).parent();
+                const id = $parent.attr('id');
+
                 if (isshwing[id]) {
-                    //もしidのqa-boxが表示されていたら
-                    //そのqa-boxを非表示にする
-                    height[id] = $('#' + id).children('.qa-answer').eq(0).height();
+                    // もしidのqa-boxが表示されていたら非表示にする
+                    $parent.removeClass("showing");
                     $(this).removeClass("shwing");
-                    $(this).parent().removeClass("showing");
-                    $(this).parent().children(".qa-answer").eq(0).css("margin-bottom", "0px");
-                    $(this).parent().children(".qa-answer").eq(0).animate(
+
+                    const $answer = $parent.children(".qa-answer").eq(0);
+                    $answer.css("margin-bottom", "0px");
+
+                    $answer.animate(
                         {
                             opacity: 0,
                             "margin-bottom": (-height[id]) + "px"
@@ -55,18 +62,20 @@
                         100,
                         "linear",
                         function () {
-                            $(this).parent().children(".qa-answer").eq(0).css('display', 'none');
+                            $(this).css('display', 'none');
                         }
                     );
                     $(this).children('h3').eq(0).removeClass("vis");
                     isshwing[id] = false;
+
                 } else {
-                    //もしidのqa-boxが表示されていなかったら
-                    //そのqa-boxを表示する
+                    $parent.addClass("showing");
                     $(this).addClass("shwing");
-                    $(this).parent().addClass("showing");
-                    $(this).parent().children(".qa-answer").eq(0).css('display', 'flex').css("margin-bottom", (-height[id]) + "px");
-                    $(this).parent().children(".qa-answer").eq(0).animate(
+
+                    const $answer = $parent.children(".qa-answer").eq(0);
+                    $answer.css('display', 'flex').css("margin-bottom", (-height[id]) + "px");
+
+                    $answer.animate(
                         {
                             opacity: 1,
                             "margin-bottom": "0px"
@@ -135,6 +144,19 @@
                     <div class="updates-info">
                         <h2>最新情報</h2>
                     </div>
+                    <div class="qa-box" id="0">
+                        <div class="qa-title">
+                            <h3>137周年記念祭公式ホームページが完成しました！</h3>
+                            <div class="updates-date">
+                                <p>更新日：2025/8/15</p>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <div class="answer-content-wrap">
+                                <p class="answer-check hide">新しくなった記念祭の文章をお楽しみください！最新情報が入り次第、更新していきます。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -145,7 +167,7 @@
                     <div class="qa-info">
                         <h2>よくある質問</h2>
                     </div>
-                    <div class="qa-box" id="0">
+                    <div class="qa-box" id="100">
                         <div class="qa-title">
                             <h3>
                                 <div>Q.</div>
@@ -159,7 +181,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="qa-box" id="1">
+                    <div class="qa-box" id="101">
                         <div class="qa-title">
                             <h3>
                                 <div>Q.</div>
@@ -175,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="qa-box" id="2">
+                    <div class="qa-box" id="102">
                         <div class="qa-title">
                             <h3>
                                 <div>Q.</div>
@@ -190,7 +212,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="qa-box" id="3">
+                    <div class="qa-box" id="103">
                         <div class="qa-title">
                             <h3>
                                 <div>Q.</div>

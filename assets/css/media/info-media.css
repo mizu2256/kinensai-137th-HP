@@ -61,6 +61,10 @@
 }
 
 @media (max-width: 600px) {
+  .qa-con, .updates-con {
+    margin: 0 10px 0;
+  }
+
   .qa-box {
     padding: 12px 24px 18px;
   }
@@ -70,7 +74,7 @@
   }
 
   .qa-title h3 {
-    font-size: var(--sbFont);
+    font-size: var(--mbFont);
   }
 
   .qa-title h3::before {
