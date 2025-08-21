@@ -1,10 +1,10 @@
-@media (min-width: 961px) {
+@media (min-width: 1151px) {
   .nav-con {
     display: flex;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1150px) {
   .burger-menu {
     display: flex;
   }
