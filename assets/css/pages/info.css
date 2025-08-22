@@ -42,12 +42,12 @@
 
 .qa-title {
   margin-bottom: 0px;
+  cursor: pointer;
   transition: linear 0.1s margin-bottom;
 }
 
 .qa-title h3 {
   display: flex;
-  cursor: pointer;
   border-bottom: solid 0px transparent;
   padding-bottom: 0;
   transition: linear 0.1s border-bottom, linear 0.1s padding-bottom;

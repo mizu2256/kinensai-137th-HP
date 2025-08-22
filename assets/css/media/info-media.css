@@ -7,6 +7,10 @@
     margin-bottom: 24px;
   }
 
+  .qa-title.shwing.updates-mode {
+    margin-bottom: 6px;
+  }
+
   .qa-title h3 {
     font-size: var(--xstFont);
   }
@@ -36,6 +40,10 @@
 
   .qa-title.shwing {
     margin-bottom: 16px;
+  }
+
+  .qa-title.shwing.updates-mode {
+    margin-bottom: 4px;
   }
 
   .qa-title h3 {
