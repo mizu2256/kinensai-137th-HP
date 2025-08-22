@@ -3,12 +3,6 @@
   --y: 12px;
 }
 
-main {
-  padding: 72px 0 36px;
-  flex-grow: 1;
-  font-family: var(--fontIII);
-}
-
 textarea,
 input {
   resize: none;

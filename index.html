@@ -147,11 +147,7 @@
             border-bottom: 2px solid var(--colorIII);
         }
 
-        main {
-            padding: 72px 0 36px;
-            flex-grow: 1;
-            font-family: var(--fontIII);
-        }
+        /* ここまでヘッダー */
 
         #title-schedule {
             display: flex;
@@ -224,6 +220,50 @@
             font-size: var(--mtFont);
         }
 
+        /* 重要情報 */
+        #important-info {
+            background-color: rgba(255, 0, 0, 0.1);
+        }
+
+        .important-con {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            gap: 40px;
+        }
+
+        .important-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .important-title i,
+        .important-title h2 {
+            font-size: var(--xstFont);
+        }
+
+        .important-data {
+            display: flex;
+            gap: 10px;
+        }
+
+        .important-data p {
+            padding-top: 4px;
+            font-size: var(--sbFont);
+            user-select: none;
+        }
+
+        .important-data a {
+            font-size: var(--lbFont);
+            color: black;
+            transition: color .5s ease;
+        }
+
+        .important-data a:hover {
+            color: var(--colorII);
+        }
+
         /* 注意事項 */
 
         .attention-con {
@@ -287,7 +327,7 @@
             align-items: left;
         }
 
-        
+
         @media (min-width: 1151px) {
             .nav-con {
                 display: flex;
@@ -372,6 +412,12 @@
         @media (max-width: 960px) {
             .title {
                 background-color: rgba(255, 255, 255, 0.7);
+            }
+
+            .important-con {
+                flex-direction: column;
+                gap: 5px;
+                padding: 10px 0;
             }
 
             .attention-con {
@@ -483,6 +529,14 @@
             .title h3 span.time {
                 display: block;
             }
+
+            .important-data p {
+                padding: 0 0 2px;
+            }
+
+            .important-data a {
+                font-size: var(--sbFont);
+            }
         }
 
         @media (max-width: 450px) {
@@ -593,6 +647,20 @@
             </div>
         </section>
 
+        <section id="important-info">
+            <div class="wrapper">
+                <div class="important-con">
+                    <div class="important-title">
+                        <i class="fa-solid fa-circle-exclamation" style="transform: rotate(180deg);"></i>
+                        <h2>重要なお知らせ</h2>
+                    </div>
+                    <div class="important-data">
+                        <p>▶︎</p>
+                        <a href="new-projects.html">新企画が始まります！詳しくはこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="attention">
             <div class="wrapper">

@@ -1,0 +1,66 @@
+main {
+  padding-bottom: 0;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.5);
+  background-image: url("/assets/pictures/pages/new-projects/background.webp");
+  z-index: -1;
+}
+
+.newpj-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px 80px;
+  margin: 40px auto;
+  border-radius: 50px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+  width: fit-content;
+}
+
+.box-text {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.newpj-box p {
+  font-size: var(--stFont);
+  font-weight: 700;
+}
+
+.newpj-box h2 {
+  font-size: 130px;
+}
+
+.newpj-box h3,
+.newpj-box span {
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.newpj-box h4 {
+  margin: 20px auto;
+  font-size: var(--mtFont);
+}
+
+.date {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.date span {
+  color: rgb(0, 113, 193);
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px -1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}
