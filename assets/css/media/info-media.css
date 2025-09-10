@@ -34,6 +34,10 @@
 }
 
 @media (max-width: 768px) {
+  .inv {
+    display: none;
+  }
+  
   .qa-box {
     padding: 16px 32px 24px;
   }
@@ -69,7 +73,8 @@
 }
 
 @media (max-width: 600px) {
-  .qa-con, .updates-con {
+  .qa-con,
+  .updates-con {
     margin: 0 10px 0;
   }
 
@@ -108,10 +113,6 @@
 }
 
 @media (max-width: 512px) {
-  .inv {
-    display: none;
-  }
-
   .form-link-con {
     text-align: center;
   }

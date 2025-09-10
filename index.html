@@ -350,7 +350,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             background-color: white;
             padding: 20px;
             border-radius: 8px;
@@ -360,16 +360,37 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        .popup-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
         .popup-con h2 {
             font-size: var(--ltFont);
         }
 
-        .popup-con h3 {
+        .popup-title h3 {
             font-size: var(--xstFont);
         }
 
         .popup-con p {
             padding: 15px 0;
+            font-size: var(--sbFont);
+        }
+
+        .popup-title i {
+            font-size: var(--mtFont);
+        }
+
+        .popup-options {
+            user-select: none;
+        }
+
+        .popup-options label,
+        .popup-options input {
+            cursor: pointer;
             font-size: var(--sbFont);
         }
 
@@ -577,6 +598,11 @@
                 max-width: 400px;
             }
 
+            .popup-title {
+                display: block;
+                gap: 0;
+            }
+
             .pop-spacer {
                 display: block;
             }
@@ -585,7 +611,7 @@
                 font-size: var(--mtFont);
             }
 
-            .popup-con h3 {
+            .popup-title h3 {
                 font-size: var(--lbFont);
             }
         }
@@ -867,9 +893,17 @@
         <section class="popup-overlay">
             <div class="popup-con">
                 <span class="close-btn">&times;</span>
-                <h3>お車での来場を<span class="pop-spacer"></span>予定している方へ</h3>
+                <div class="popup-title">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <h3>お車での来場を<span class="pop-spacer"></span>予定している方へ</h3>
+                </div>
                 <h2>駐車場は<span class="pop-spacer"></span>ございません</h2>
-                <p>近隣のドラッグストアやコンビニの駐車場を不正に利用するお客様がおり、トラブルが発生しております。<br>ご来校の際は自家用車ではなく、<span style="text-decoration: underline; font-weight: 700;">公共交通機関</span>をご利用いただきますようお願いいたします。</p>
+                <p>近隣のドラッグストアやコンビニの駐車場を不正に利用するお客様がおり、トラブルが発生しております。<br>ご来校の際は自家用車ではなく、<span
+                        style="text-decoration: underline; font-weight: 700;">公共交通機関</span>をご利用いただきますようお願いいたします。</p>
+                <div class="popup-options">
+                    <input type="checkbox" id="do-not-show-again">
+                    <label for="do-not-show-again">今後表示しない</label>
+                </div>
             </div>
         </section>
     </main>
