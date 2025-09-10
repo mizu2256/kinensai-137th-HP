@@ -70,7 +70,3 @@ li {
   color: var(--colorII);
   pointer-events: none;
 }
-
-input[type="checkbox"] {
-  -webkit-appearance: checkbox;
-}
