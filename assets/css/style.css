@@ -61,7 +61,7 @@ li {
 }
 
 .inv {
-  opacity: .07;
+  opacity: 0.07;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -69,4 +69,8 @@ li {
   font-size: 216px;
   color: var(--colorII);
   pointer-events: none;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
 }
