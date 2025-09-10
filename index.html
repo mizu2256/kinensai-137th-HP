@@ -327,6 +327,67 @@
             align-items: left;
         }
 
+        /* pop-up */
+        /* ポップアップを画面全体に覆いかぶせる半透明のオーバーレイ */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 半透明の黒 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+            /* 初期状態では非表示 */
+        }
+
+        /* ポップアップの中身 */
+        .popup-con {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            text-align: center;
+            max-width: 512px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-con h2 {
+            font-size: var(--ltFont);
+        }
+
+        .popup-con h3 {
+            font-size: var(--xstFont);
+        }
+
+        .popup-con p {
+            padding: 15px 0;
+            font-size: var(--sbFont);
+        }
+
+        /* 閉じるボタン */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .close-btn:hover {
+            color: #555;
+        }
+
+        /* media */
 
         @media (min-width: 1151px) {
             .nav-con {
@@ -511,6 +572,22 @@
             .attention-detail h3 {
                 font-size: var(--sbFont);
             }
+
+            .popup-con {
+                max-width: 400px;
+            }
+
+            .pop-spacer {
+                display: block;
+            }
+
+            .popup-con h2 {
+                font-size: var(--mtFont);
+            }
+
+            .popup-con h3 {
+                font-size: var(--lbFont);
+            }
         }
 
         @media (max-width: 512px) {
@@ -555,6 +632,10 @@
             .media-spacer {
                 display: block;
             }
+
+            .popup-con {
+                max-width: 300px;
+            }
         }
 
         @media (max-width: 350px) {
@@ -586,6 +667,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
     </noscript>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/index-popup.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HDWLDJ661"></script>
@@ -777,6 +862,14 @@
                                     class="direction">>>></span></a></div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="popup-overlay">
+            <div class="popup-con">
+                <span class="close-btn">&times;</span>
+                <h3>お車での来場を<span class="pop-spacer"></span>予定している方へ</h3>
+                <h2>駐車場は<span class="pop-spacer"></span>ございません</h2>
+                <p>近隣のドラッグストアやコンビニの駐車場を不正に利用するお客様がおり、トラブルが発生しております。<br>ご来校の際は自家用車ではなく、<span style="text-decoration: underline; font-weight: 700;">公共交通機関</span>をご利用いただきますようお願いいたします。</p>
             </div>
         </section>
     </main>
