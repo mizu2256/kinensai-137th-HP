@@ -11,7 +11,7 @@ $(document).ready(function() {
   }
 
   // ポップアップが未表示、または有効期限が切れているかチェック
-  if (!popupData || (now - popupData > 5 * 1000)) {
+  if (!popupData || (now - popupData > 24 * 60 * 60 * 1000)) {
     // ポップアップを表示
     $('.popup-overlay').fadeIn();
 
