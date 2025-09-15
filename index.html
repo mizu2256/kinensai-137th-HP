@@ -56,9 +56,6 @@
             --fontI: "Zen Antique Soft", serif;
             --fontII: "Alex Brush", serif;
             --fontIII: sans-serif;
-
-            /* 写真 */
-            --title-bg-image: url("assets/pictures/pages/home/HP.webp");
         }
 
         body {
@@ -79,12 +76,6 @@
             max-width: 1350px;
             margin: 0 auto;
             padding: 0 5% 0;
-        }
-
-        @media (min-width: 961px) {
-            :root {
-                --title-bg-image: url(assets/pictures/pages/home/HP_PC.webp);
-            }
         }
 
         header {
@@ -161,7 +152,7 @@
         #title-schedule {
             display: flex;
             height: 900px;
-            background-image: var(--title-bg-image);
+            background-image: url("assets/pictures/pages/home/HP.webp");
             background-size: cover;
             background-position: left;
         }
@@ -250,6 +241,10 @@
         .important-title i,
         .important-title h2 {
             font-size: var(--xstFont);
+        }
+
+        .important-title i {
+            padding-bottom: 2px;
         }
 
         .important-data {
