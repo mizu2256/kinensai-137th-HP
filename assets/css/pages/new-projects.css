@@ -20,11 +20,20 @@ main {
   flex-direction: column;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 40px 80px;
+  padding: 30px 80px 10px;
   margin: 40px auto;
   border-radius: 50px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 1);
   width: fit-content;
+}
+
+.data-box {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.data-box h2 {
+  padding-bottom: 20px;
+  font-size: var(--stFont);
 }
 
 .box-text {
@@ -33,24 +42,29 @@ main {
   gap: 5px;
 }
 
-.newpj-box p {
+.title-con .newpj-box > .box-text > p {
   font-size: var(--stFont);
   font-weight: 700;
 }
 
-.newpj-box h2 {
+.title-con .newpj-box h2 {
   font-size: 130px;
 }
 
-.newpj-box h3,
-.newpj-box span {
+.title-con .newpj-box h3,
+.title-con .newpj-box span {
   font-size: 80px;
   font-weight: 800;
 }
 
-.newpj-box h4 {
+.title-con .newpj-box h4 {
   margin: 20px auto;
   font-size: var(--mtFont);
+}
+
+.newpj-box > p.box-info {
+  font-size: var(--mbFont);
+  font-weight: 600;
 }
 
 .date {
@@ -63,4 +77,156 @@ main {
   color: rgb(0, 113, 193);
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000,
     1px -1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}
+
+.timeline {
+  position: relative;
+  list-style: none; /* リストのデフォルトのドットを非表示にする */
+  padding: 0;
+  margin: 0;
+}
+
+/* 垂直なタイムラインの線 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 17px; /* アイコンの位置に合わせて調整 */
+  top: 0;
+  bottom: 32px;
+  width: 2px;
+  background-color: #ccc; /* 線の色 */
+}
+
+.timeline-event {
+  position: relative;
+  padding-left: 48px; /* アイコンの幅に合わせて調整 */
+  margin-bottom: 32px; /* イベント間の余白 */
+}
+
+/* タイムラインのアイコン（スタンプ） */
+.timeline-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #007bff; /* アイコンの背景色 */
+  color: white; /* アイコンの文字色 */
+  border-radius: 50%; /* アイコンを円形にする */
+  font-size: var(--mbFont);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  user-select: none;
+}
+
+.timeline-content {
+  background-color: #f9f9f9; /* コンテンツの背景色 */
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.timeline-content h3 {
+  font-size: var(--xstFont);
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  font-size: var(--sbFont);
+  margin: 0;
+}
+
+.shop-image {
+  margin: 20px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shop-image figure img {
+  width: 160px;
+  height: 160px;
+}
+
+@media (max-width: 768px) {
+  .newpj-box.data-box {
+    padding: 30px 40px 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title-con .newpj-box {
+    padding: 40px 60px;
+  }
+
+  .box-text {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .title-con .newpj-box p,
+  .title-con .newpj-box .box-text p {
+    font-size: var(--lbFont);
+  }
+
+  .title-con .newpj-box p.box-info {
+    font-size: var(--sbFont);
+  }
+
+  .title-con .newpj-box h2 {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 512px) {
+  .title-con .newpj-box {
+    padding: 20px 60px;
+  }
+
+  .title-con .newpj-box h2 {
+    font-size: 76px;
+  }
+
+  .title-con .newpj-box h4 {
+    font-size: var(--stFont);
+  }
+
+  .newpj-box.data-box {
+    padding: 30px 10px 10px;
+  }
+
+  .timeline-event {
+    padding-left: 42px;
+  }
+
+  .timeline-content h3 {
+    font-size: var(--lbFont);
+  }
+}
+
+@media (max-width: 450px) {
+  .title-con .newpj-box {
+    padding: 20px 50px;
+  }
+
+  .title-con .newpj-box p,
+  .title-con .newpj-box .box-text p {
+    font-size: var(--mbFont);
+  }
+
+  .title-con .newpj-box h2 {
+    font-size: 64px;
+  }
+
+  .title-con .newpj-box h4 {
+    font-size: var(--lbFont);
+  }
+}
+
+@media (max-width: 350px) {
+  .title-con .newpj-box {
+    padding: 20px 35px;
+  }
 }
